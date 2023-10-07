@@ -1,15 +1,36 @@
 {
-	"クラス": {},
-	"テーブル": {},
-	"デフォルト": {
+	"DEMO": {
 		"groups": [
-			"クラス",
-			"テーブル",
-			"フォーム",
-			"プロジェクトメソッド"
+			"DEMO_App",
+			"DEMO_Storage"
+		],
+		"methods": [
+			"DEMO_Start",
+			"メソッド8"
 		]
 	},
-	"フォーム": {},
-	"プロジェクトメソッド": {},
+	"DEMO_App": {
+		"methods": [
+			"DEMO_Compiler",
+			"DEMO_ErrMethod",
+			"DEMO_Login"
+		],
+		"forms": [
+			"DEMO_Login"
+		]
+	},
+	"DEMO_Storage": {
+		"methods": [
+			"DEMO_Storage_LoggedIn",
+			"DEMO_Storage_Quit",
+			"DEMO_Storage_SessionId"
+		]
+	},
+	"汎用": {
+		"methods": [
+			"4DC_WIN_FORM",
+			"Convert_OldCastToNewCast"
+		]
+	},
 	"trash": {}
 }

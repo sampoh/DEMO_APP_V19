@@ -1,3 +1,13 @@
 {
-	"forms": {}
+	"forms": {
+		"DEMO_List": {
+			"timeStamp": "2023-08-28T10:59:34.489Z",
+			"destination": "detailScreen"
+		},
+		"DEMO_Login": {
+			"timeStamp": "2023-10-06T05:46:22.588Z",
+			"destination": "detailScreen",
+			"shared": true
+		}
+	}
 }

@@ -1,15 +1,39 @@
 {
-	"クラス": {},
-	"テーブル": {},
-	"デフォルト": {
+	"DEMO": {
 		"groups": [
-			"クラス",
-			"テーブル",
-			"フォーム",
-			"プロジェクトメソッド"
+			"DEMO_Tables"
+		],
+		"methods": [
+			"DEMO_Startup",
+			"DEMOS_Login"
 		]
 	},
-	"フォーム": {},
-	"プロジェクトメソッド": {},
+	"DEMO_Tables": {
+		"tables": [
+			"error",
+			"errorClient",
+			"session",
+			"user"
+		],
+		"methods": [
+			"DEMO_Generate_IO_Form"
+		],
+		"forms": [
+			"[error]INPUT",
+			"[error]OUTPUT",
+			"[errorClient]INPUT",
+			"[errorClient]OUTPUT",
+			"[session]INPUT",
+			"[session]OUTPUT",
+			"[user]INPUT",
+			"[user]OUTPUT"
+		]
+	},
+	"汎用": {
+		"methods": [
+			"Convert_OldCastToNewCast",
+			"Convert_SessionToUser"
+		]
+	},
 	"trash": {}
 }

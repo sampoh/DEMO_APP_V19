@@ -1,0 +1,241 @@
+﻿{
+	"bottomMargin": 10,
+	"destination": "listScreen",
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"markerBody": 46,
+	"markerBreak": 51,
+	"markerFooter": 51,
+	"markerHeader": 24,
+	"pageFormat": {
+		"pagerHeight": "841pt",
+		"pagerName": "A4",
+		"pagerWidth": "595pt"
+	},
+	"rightMargin": 16,
+	"pages": [
+		null,
+		{
+			"objects": {
+				"S1_テキスト": {
+					"height": 15,
+					"left": 15,
+					"sizingX": "grow",
+					"text": "ID : ",
+					"top": 7,
+					"type": "text",
+					"width": 60
+				},
+				"S1_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]ID:1",
+					"dataSourceTypeHint": "integer",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 15,
+					"top": 28,
+					"type": "input",
+					"width": 60
+				},
+				"S2_テキスト": {
+					"height": 15,
+					"left": 87,
+					"sizingX": "grow",
+					"text": "datetime : ",
+					"top": 7,
+					"type": "text",
+					"width": 245
+				},
+				"S2_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]datetime:2",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 87,
+					"top": 28,
+					"type": "input",
+					"width": 245
+				},
+				"S3_テキスト": {
+					"height": 15,
+					"left": 344,
+					"sizingX": "grow",
+					"text": "message : ",
+					"top": 7,
+					"type": "text",
+					"width": 245
+				},
+				"S3_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]message:3",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 344,
+					"top": 28,
+					"type": "input",
+					"width": 245
+				},
+				"S4_テキスト": {
+					"height": 15,
+					"left": 601,
+					"sizingX": "grow",
+					"text": "session : ",
+					"top": 7,
+					"type": "text",
+					"width": 245
+				},
+				"S4_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]session:4",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 601,
+					"top": 28,
+					"type": "input",
+					"width": 245
+				},
+				"S2_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 80,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S3_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 337,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S4_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 594,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S2_Line": {
+					"height": 46,
+					"left": 81,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				},
+				"S3_Line": {
+					"height": 46,
+					"left": 338,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				},
+				"S4_Line": {
+					"height": 46,
+					"left": 595,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				}
+			}
+		}
+	]
+}

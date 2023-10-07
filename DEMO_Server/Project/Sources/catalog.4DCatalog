@@ -2,7 +2,114 @@
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="DEMO_Server" uuid="624EA698DE84954AAB8DF056FDE2935F" collation_locale="ja">
 	<schema name="DEFAULT_SCHEMA"/>
-	<base_extra>
+	<table name="user" uuid="3054989F3DC430498ED674379EE6D746" id="1">
+		<field name="ID" uuid="0AE84AE669994140AFAA30FE7CB228F8" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="account" uuid="D26DA2754143664D8978F7E26D3B0C24" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="password" uuid="66CD5D84EB593643BC1F5922FCCEC767" type="10" limiting_length="255" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="0AE84AE669994140AFAA30FE7CB228F8"/>
+		<table_extra input_form="INPUT" output_form="OUTPUT">
+			<editor_table_info displayable_fields_count="4">
+				<color alpha="255" blue="127" green="130" red="249"/>
+				<coordinates height="141.33203125" left="0" top="0" width="146"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="session" uuid="10CBD3C709D8E74BB31D1FF348DBE7CE" id="2">
+		<field name="ID" uuid="AF0A7EDF456C8C4883C34034C0F74E93" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="ID_user" uuid="02196513CF492F4981AAF5259DDEF8B8" type="4" never_null="true" id="2"/>
+		<field name="sessionId" uuid="7FF198F7538DA344AA818CA88479200D" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="loginDatetime" uuid="A45DCFAF79DFCE4390C36AE96008591B" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="accessDatetime" uuid="C99BB0413F8958448864871C81DA4B9D" type="10" limiting_length="255" never_null="true" id="5">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="data" uuid="77F6E1341DD98B4C8A74F7BABE0FD5BF" type="21" blob_switch_size="2147483647" never_null="true" id="6"/>
+		<primary_key field_name="ID" field_uuid="AF0A7EDF456C8C4883C34034C0F74E93"/>
+		<table_extra input_form="INPUT" output_form="OUTPUT">
+			<editor_table_info displayable_fields_count="7">
+				<color alpha="255" blue="127" green="130" red="249"/>
+				<coordinates height="192.33203125" left="0" top="159" width="146"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="error" uuid="2D3815D9F47A6E429BE0019D7C36D5C7" id="3">
+		<field name="ID" uuid="08CADC41F8A37D4BBBBB5FE8BF80C9A8" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="code" uuid="DAE7619247B0D04281DE84C596A962FE" type="4" never_null="true" id="2"/>
+		<field name="comp" uuid="A5249EFE9422434882A777973C63AA8E" type="10" never_null="true" id="3"/>
+		<field name="text" uuid="2D0A3D71DCCC414D91F4B88469F59ABA" type="10" never_null="true" id="4"/>
+		<field name="function" uuid="97E6AC485F82B24F9F01FC06CBF5ACE2" type="10" never_null="true" id="5"/>
+		<field name="datetime" uuid="98730FEC3AE95947B0CB922C4C1771D6" type="10" limiting_length="255" never_null="true" id="6"/>
+		<primary_key field_name="ID" field_uuid="08CADC41F8A37D4BBBBB5FE8BF80C9A8"/>
+		<table_extra input_form="INPUT" output_form="OUTPUT">
+			<editor_table_info displayable_fields_count="7">
+				<color alpha="255" blue="255" green="255" red="255"/>
+				<coordinates height="201.33203125" left="203" top="0" width="146"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="errorClient" uuid="B1A17967C95F994882707B083C69BB57" id="4">
+		<field name="ID" uuid="678FC06D7EEAF648A8D7048732AA4237" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="datetime" uuid="7867A5013CD61544B19E7F03D7CD1B44" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="message" uuid="2DEA5EDB4E064D439156A2806332AF0B" type="10" never_null="true" id="3"/>
+		<field name="session" uuid="60A4F06598C67249AEADA971DDD25F1C" type="10" limiting_length="255" never_null="true" id="4"/>
+		<primary_key field_name="ID" field_uuid="678FC06D7EEAF648A8D7048732AA4237"/>
+		<table_extra input_form="INPUT" output_form="OUTPUT">
+			<editor_table_info displayable_fields_count="7">
+				<color alpha="255" blue="255" green="255" red="255"/>
+				<coordinates height="190.33203125" left="191" top="222" width="186"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" uuid="1E3F4D4A865CD04BBC8F1AE5019D51B0" type="7">
+		<field_ref uuid="66CD5D84EB593643BC1F5922FCCEC767" name="password">
+			<table_ref uuid="3054989F3DC430498ED674379EE6D746" name="user"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3EA80452EA012B4E816C7E5287B9CC26" type="7">
+		<field_ref uuid="C99BB0413F8958448864871C81DA4B9D" name="accessDatetime">
+			<table_ref uuid="10CBD3C709D8E74BB31D1FF348DBE7CE" name="session"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="570BEF2FD1135943A31A3A9D20916543" type="7">
+		<field_ref uuid="AF0A7EDF456C8C4883C34034C0F74E93" name="ID">
+			<table_ref uuid="10CBD3C709D8E74BB31D1FF348DBE7CE" name="session"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5C8786A0D52F4648A7949290C8670AFB" type="7">
+		<field_ref uuid="678FC06D7EEAF648A8D7048732AA4237" name="ID">
+			<table_ref uuid="B1A17967C95F994882707B083C69BB57" name="errorClient"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6C5ADA536960BA4BB1F64FF678AE53E0" type="7">
+		<field_ref uuid="7867A5013CD61544B19E7F03D7CD1B44" name="datetime">
+			<table_ref uuid="B1A17967C95F994882707B083C69BB57" name="errorClient"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="6F42D439BE28A141A8CDE3038F8DAC36" type="7">
+		<field_ref uuid="0AE84AE669994140AFAA30FE7CB228F8" name="ID">
+			<table_ref uuid="3054989F3DC430498ED674379EE6D746" name="user"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="854A811C59CD954EBC0BA15B022244F1" type="7">
+		<field_ref uuid="D26DA2754143664D8978F7E26D3B0C24" name="account">
+			<table_ref uuid="3054989F3DC430498ED674379EE6D746" name="user"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="94EBD8176FCB4D4DB41AEB8EC0CA0A98" type="7">
+		<field_ref uuid="7FF198F7538DA344AA818CA88479200D" name="sessionId">
+			<table_ref uuid="10CBD3C709D8E74BB31D1FF348DBE7CE" name="session"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A4921486B797464EAEBB8AA366054500" type="7">
+		<field_ref uuid="02196513CF492F4981AAF5259DDEF8B8" name="ID_user">
+			<table_ref uuid="10CBD3C709D8E74BB31D1FF348DBE7CE" name="session"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="DC7AEEF3375C18488B43EA2272461A5F" type="7">
+		<field_ref uuid="08CADC41F8A37D4BBBBB5FE8BF80C9A8" name="ID">
+			<table_ref uuid="2D3815D9F47A6E429BE0019D7C36D5C7" name="error"/>
+		</field_ref>
+	</index>
+	<base_extra __keywordBuildingHash="mecab:0.996;sys.dic:102;" __stringCompHash="icu:68.1.0, alternate=search">
 		<journal_file journal_file_enabled="true"/>
 	</base_extra>
 </base>

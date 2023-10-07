@@ -1,0 +1,361 @@
+﻿{
+	"$4d": {
+		"version": 1,
+		"kind": "form"
+	},
+	"bottomMargin": 20,
+	"destination": "detailScreen",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"geometryStamp": 218,
+	"markerBody": 692,
+	"markerBreak": 692,
+	"markerFooter": 702,
+	"pageFormat": {
+		"pagerHeight": "841pt",
+		"pagerName": "A4",
+		"pagerWidth": "595pt"
+	},
+	"rightMargin": 20,
+	"pages": [
+		{
+			"objects": {
+				"btnFirst": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 20,
+					"text": "|<",
+					"action": "firstRecord"
+				},
+				"btnPrevious": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 66,
+					"text": "<",
+					"action": "previousRecord"
+				},
+				"btnNext": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 112,
+					"text": ">",
+					"action": "nextRecord"
+				},
+				"btnLast": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 158,
+					"text": ">|",
+					"action": "lastRecord"
+				},
+				"btnPreviousPage": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 204,
+					"text": "<P",
+					"action": "previousPage"
+				},
+				"btnNextPage": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 250,
+					"text": "P>",
+					"action": "nextPage"
+				},
+				"btnDelete": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 296,
+					"text": "DEL",
+					"action": "deleteRecord"
+				},
+				"btnCancel": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 342,
+					"text": "×",
+					"action": "cancel"
+				},
+				"btnValidate": {
+					"type": "button",
+					"height": 31,
+					"left": 27,
+					"width": 37,
+					"fontSize": 14,
+					"fontWeight": "bold",
+					"events": [
+						"onClick"
+					],
+					"top": 388,
+					"text": "✓",
+					"action": "accept"
+				},
+				"uiLine": {
+					"height": 762,
+					"left": 88,
+					"sizingY": "grow",
+					"top": 0,
+					"type": "line"
+				},
+				"objTableName": {
+					"borderStyle": "none",
+					"dataSource": "Table name:C256(->[errorClient:4])",
+					"enterable": false,
+					"height": 16,
+					"left": 103,
+					"top": 10,
+					"width": 314,
+					"type": "input"
+				},
+				"objRecordNumber": {
+					"borderStyle": "none",
+					"dataSource": "Choose:C955(Selected record number:C246(Current form table:C627->)<0; \"\"; String:C10(Selected record number:C246(Current form table:C627->))+\" / \"+String:C10(Records in selection:C76(Current form table:C627->)))",
+					"enterable": false,
+					"fontSize": 12,
+					"height": 16,
+					"left": 429,
+					"top": 11,
+					"width": 133,
+					"type": "input"
+				}
+			}
+		},
+		{
+			"objects": {
+				"ID": {
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]ID:1",
+					"dataSourceTypeHint": "integer",
+					"dragging": "none",
+					"dropping": "none",
+					"enterable": true,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"focusable": false,
+					"height": 16,
+					"left": 191,
+					"top": 45,
+					"type": "input",
+					"width": 71
+				},
+				"テキスト": {
+					"height": 15,
+					"left": 115,
+					"text": "ID : ",
+					"top": 45,
+					"type": "text",
+					"width": 71
+				},
+				"datetime": {
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]datetime:2",
+					"dragging": "none",
+					"dropping": "none",
+					"enterable": true,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"focusable": false,
+					"height": 16,
+					"left": 191,
+					"top": 70,
+					"type": "input",
+					"width": 320
+				},
+				"テキスト_1": {
+					"height": 15,
+					"left": 115,
+					"text": "datetime : ",
+					"top": 70,
+					"type": "text",
+					"width": 71
+				},
+				"message": {
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]message:3",
+					"dragging": "none",
+					"dropping": "none",
+					"enterable": true,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"scrollbarVertical": "visible",
+					"focusable": false,
+					"height": 64,
+					"left": 191,
+					"top": 95,
+					"type": "input",
+					"width": 320
+				},
+				"テキスト_2": {
+					"height": 15,
+					"left": 115,
+					"text": "message : ",
+					"top": 95,
+					"type": "text",
+					"width": 71
+				},
+				"session": {
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dataSource": "[errorClient:4]session:4",
+					"dragging": "none",
+					"dropping": "none",
+					"enterable": true,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"focusable": false,
+					"height": 16,
+					"left": 191,
+					"top": 168,
+					"type": "input",
+					"width": 320
+				},
+				"テキスト_3": {
+					"height": 15,
+					"left": 115,
+					"text": "session : ",
+					"top": 168,
+					"type": "text",
+					"width": 71
+				}
+			}
+		}
+	]
+}

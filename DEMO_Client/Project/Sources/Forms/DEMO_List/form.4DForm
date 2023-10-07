@@ -1,0 +1,447 @@
+{
+	"destination": "detailScreen",
+	"formSizeAnchor": "Rectangle",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onUnload",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "841pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 640,
+					"height": 480,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"LB_URL": {
+					"type": "listbox",
+					"top": 63,
+					"left": 20,
+					"width": 600,
+					"height": 397,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"scrollbarHorizontal": "automatic",
+					"method": "ObjectMethods/LB_URL.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "IDs",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"visibility": "hidden",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "ID ( 非表示 )"
+							},
+							"footer": {
+								"name": "Footer2"
+							}
+						},
+						{
+							"name": "TITLEs",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "TITLE"
+							},
+							"footer": {
+								"name": "Footer6"
+							}
+						},
+						{
+							"name": "URLs",
+							"width": 383,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "left",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "URL"
+							},
+							"footer": {
+								"name": "Footer1"
+							}
+						}
+					]
+				},
+				"BTN_CLOSE": {
+					"type": "button",
+					"top": 18,
+					"left": 512,
+					"width": 110,
+					"height": 31,
+					"sizingX": "move",
+					"text": "CLOSE",
+					"focusable": false,
+					"method": "ObjectMethods/BTN_CLOSE.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"BTN_RELOAD": {
+					"type": "button",
+					"top": 18,
+					"left": 18,
+					"width": 110,
+					"height": 31,
+					"text": "RELOAD",
+					"focusable": false,
+					"method": "ObjectMethods/BTN_RELOAD.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"BTN_ADD": {
+					"type": "button",
+					"top": 18,
+					"left": 265,
+					"width": 110,
+					"height": 31,
+					"text": "ADD",
+					"focusable": false,
+					"method": "ObjectMethods/BTN_ADD.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"progress_bg_001": {
+					"type": "picture",
+					"top": 60,
+					"left": 0,
+					"width": 640,
+					"height": 480,
+					"visibility": "hidden",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/gray.png"
+				},
+				"Thermometer_001": {
+					"type": "spinner",
+					"top": 224,
+					"left": 304,
+					"width": 32,
+					"height": 32,
+					"visibility": "hidden",
+					"dataSource": "Thermometer",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "DL",
+					"top": 18,
+					"left": 169,
+					"width": 48,
+					"height": 31,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Button",
+					"top": 18,
+					"left": 397,
+					"width": 64,
+					"height": 31,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				}
+			}
+		},
+		{
+			"objects": {
+				"BTN_BACK": {
+					"type": "button",
+					"top": 18,
+					"left": 18,
+					"width": 110,
+					"height": 31,
+					"text": "BACK",
+					"focusable": false,
+					"method": "ObjectMethods/BTN_BACK.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"detail_title": {
+					"type": "input",
+					"top": 82,
+					"left": 131,
+					"width": 479,
+					"height": 16,
+					"sizingX": "grow",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"detail_url": {
+					"type": "input",
+					"top": 122,
+					"left": 131,
+					"width": 411,
+					"height": 16,
+					"sizingX": "grow",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LB_META": {
+					"type": "listbox",
+					"top": 218,
+					"left": 20,
+					"width": 600,
+					"height": 243,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"scrollbarHorizontal": "automatic",
+					"method": "ObjectMethods/LB_META.4dm",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "meta_group",
+							"dataSourceTypeHint": "number",
+							"width": 72,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "center",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "group"
+							},
+							"footer": {
+								"name": "Footer5"
+							}
+						},
+						{
+							"name": "meta_name",
+							"width": 180,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "meta attr"
+							},
+							"footer": {
+								"name": "Footer3"
+							}
+						},
+						{
+							"name": "meta_value",
+							"width": 330,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "meta value"
+							},
+							"footer": {
+								"name": "Footer4"
+							}
+						}
+					]
+				},
+				"detail_description": {
+					"type": "input",
+					"top": 162,
+					"left": 131,
+					"width": 479,
+					"height": 16,
+					"sizingX": "grow",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 83,
+					"left": 26,
+					"width": 96,
+					"height": 13,
+					"text": "TITLE"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 123,
+					"left": 26,
+					"width": 96,
+					"height": 13,
+					"text": "URL"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 163,
+					"left": 26,
+					"width": 96,
+					"height": 13,
+					"text": "DESCRIPTION"
+				},
+				"BTN_Analyze": {
+					"type": "button",
+					"top": 120,
+					"left": 549,
+					"width": 63,
+					"height": 23,
+					"sizingX": "move",
+					"text": "Analyze",
+					"focusable": false,
+					"method": "ObjectMethods/BTN_Analyze.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"BTN_SAVE": {
+					"type": "button",
+					"top": 18,
+					"left": 512,
+					"width": 110,
+					"height": 31,
+					"sizingX": "move",
+					"text": "SAVE",
+					"focusable": false,
+					"method": "ObjectMethods/BTN_SAVE.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"progress_bg_002": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 640,
+					"height": 480,
+					"visibility": "hidden",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/gray.png"
+				},
+				"Thermometer_002": {
+					"type": "spinner",
+					"top": 224,
+					"left": 304,
+					"width": 32,
+					"height": 32,
+					"visibility": "hidden",
+					"dataSource": "Thermometer",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 14,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}
