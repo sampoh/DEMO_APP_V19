@@ -6,7 +6,11 @@
 /DEMO_Server/Resources/gauth.dat
 /DEMO_Server/Resources/gclient.dat
 /DEMO_Server/Resources/gsmtp.dat
+/DEMO_Server/*.4BK
+/DEMO_Server/*.4BL
 /DEMO_Client/Data/*
 /DEMO_Client/Components
 /DEMO_Client/userPreferences*
 /DEMO_Client/Project/Component_LOG
+/DEMO_Client/*.4BK
+/DEMO_Client/*.4BL
