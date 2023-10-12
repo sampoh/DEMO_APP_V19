@@ -12,6 +12,7 @@
 /DEMO_Client/Components
 /DEMO_Client/userPreferences*
 /DEMO_Client/Project/Component_LOG
+/DEMO_Client/Project/DerivedData/CompiledCode
 /DEMO_Client/*.4BK
 /DEMO_Client/*.4BL
 /DEMO_Server_Build/
