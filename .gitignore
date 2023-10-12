@@ -2,12 +2,14 @@
 /DEMO_Server/Components
 /DEMO_Server/userPreferences*
 /DEMO_Server/Project/Component_LOG
+/DEMO_Server/Project/DerivedData/CompiledCode
 /DEMO_Server/Resources/client_secret_*.json
 /DEMO_Server/Resources/gauth.dat
 /DEMO_Server/Resources/gclient.dat
 /DEMO_Server/Resources/gsmtp.dat
 /DEMO_Server/*.4BK
 /DEMO_Server/*.4BL
+/DEMO_Server_Build/
 /DEMO_Client/Data/*
 /DEMO_Client/Components
 /DEMO_Client/userPreferences*
@@ -15,5 +17,4 @@
 /DEMO_Client/Project/DerivedData/CompiledCode
 /DEMO_Client/*.4BK
 /DEMO_Client/*.4BL
-/DEMO_Server_Build/
 /DEMO_Client_Build/
