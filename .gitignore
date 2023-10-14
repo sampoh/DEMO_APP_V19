@@ -8,8 +8,13 @@
 /DEMO_Server/Resources/gclient.dat
 /DEMO_Server/Resources/gsmtp.dat
 /DEMO_Server/Resources/client_binary
+/DEMO_Server/WebFolder/client_binary
 /DEMO_Server/*.4BK
 /DEMO_Server/*.4BL
+/DEMO_Server/backupHistory.json
+/DEMO_Server/Settings/buildApp.4DSettings
+/DEMO_Server/Settings/backup.4DSettings
+/DEMO_Server/Project/Resources/4ds_session_storage.txt
 /DEMO_Server_Build/
 /DEMO_Client/Data/*
 /DEMO_Client/Components
@@ -18,4 +23,6 @@
 /DEMO_Client/Project/DerivedData/CompiledCode
 /DEMO_Client/*.4BK
 /DEMO_Client/*.4BL
+/DEMO_Client/backupHistory.json
+/DEMO_Client/Settings/buildApp.4DSettings
 /DEMO_Client_Build/
