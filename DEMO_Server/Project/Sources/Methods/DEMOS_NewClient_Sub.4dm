@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 //新規 4DZ ファイルに差し替え
 
 var vlErrCode : Integer
@@ -10,13 +10,13 @@ ON ERR CALL:C155("DEMOS_NewClient_OnErr")
 var $1; $version : Object
 
 var $ACCEPT : Boolean
-var $filename : Text
+var $ref; $filename : Text
 var $PATH_JSON : Text
 var $PATH_FROM; $PATH_TO : Text
 
 $version:=$1
 
-Select document:C905(""; "4dz"; "4DZファイルを選択してください。"; 0)
+$ref:=Select document:C905(""; "4dz"; "4DZファイルを選択してください。"; 0)
 
 $ACCEPT:=(\
 (OK=1) & \

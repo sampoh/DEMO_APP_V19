@@ -3,11 +3,11 @@
 		"groups": [
 			"DEMOS_App",
 			"DEMOS_BACKUP",
+			"DEMOS_Error",
 			"DEMOS_Tables",
 			"DEMOS_クライアント管理"
 		],
 		"methods": [
-			"DEMOS_ErrMethod",
 			"DEMOS_Startup"
 		]
 	},
@@ -37,6 +37,12 @@
 			"DEMOS_GoogleJSON",
 			"DEMOS_Oauth_手動",
 			"DEMOS_OnBackupShutdown"
+		]
+	},
+	"DEMOS_Error": {
+		"methods": [
+			"DEMOS_ErrMethod",
+			"DEMOS_SessionToUser"
 		]
 	},
 	"DEMOS_Tables": {
@@ -85,8 +91,7 @@
 	},
 	"汎用": {
 		"methods": [
-			"Convert_OldCastToNewCast",
-			"Convert_SessionToUser"
+			"Convert_OldCastToNewCast"
 		]
 	},
 	"trash": {}

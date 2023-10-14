@@ -12,12 +12,6 @@
 		"Convert_OldCastToNewCast": {
 			"timeStamp": "2023-10-14T16:00:35.290Z"
 		},
-		"Convert_SessionToUser": {
-			"timeStamp": "2023-10-14T16:00:35.291Z",
-			"attributes": {
-				"shared": true
-			}
-		},
 		"DEMOS_Client_Download": {
 			"timeStamp": "2023-10-14T16:00:35.292Z"
 		},
@@ -67,7 +61,7 @@
 			"timeStamp": "2023-10-14T16:00:35.305Z"
 		},
 		"DEMOS_NewClient_Sub": {
-			"timeStamp": "2023-10-14T16:00:35.306Z"
+			"timeStamp": "2023-10-14T16:14:35.917Z"
 		},
 		"DEMOS_Oauth_手動": {
 			"timeStamp": "2023-10-14T16:00:35.308Z"
@@ -78,11 +72,17 @@
 		"DEMOS_Save_Detail": {
 			"timeStamp": "2023-10-14T16:00:35.310Z"
 		},
+		"DEMOS_SessionToUser": {
+			"timeStamp": "2023-10-14T16:13:35.217Z",
+			"attributes": {
+				"shared": true
+			}
+		},
 		"DEMOS_Show_Detail": {
 			"timeStamp": "2023-10-14T16:00:35.311Z"
 		},
 		"DEMOS_Startup": {
-			"timeStamp": "2023-10-14T16:06:06.092Z"
+			"timeStamp": "2023-10-14T16:14:01.617Z"
 		},
 		"DEMOS_Unlock": {
 			"timeStamp": "2023-10-14T16:00:35.313Z"

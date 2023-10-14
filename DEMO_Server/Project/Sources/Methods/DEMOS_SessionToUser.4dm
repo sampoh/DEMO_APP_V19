@@ -1,5 +1,5 @@
-﻿//%attributes = {"shared":true}
-//エラー時にセッションIDをユーザ名に変換する
+//%attributes = {"shared":true}
+//< エラー時にセッションIDをユーザ名に変換する >
 
 //※ セッションIDがブランクの場合もあります。
 
