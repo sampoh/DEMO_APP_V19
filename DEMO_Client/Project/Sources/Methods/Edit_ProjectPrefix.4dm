@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 //< 雛型とするためプレフィックスを変更 >
 
 //※1 絶対にgithubには反映しないでください。
@@ -8,11 +8,11 @@ var $prefix : Object
 
 $prefix:=New object:C1471
 $prefix.client:=New object:C1471
-$prefix.client.old:="XXXX"  //旧接頭文字 ( クライアント )
-$prefix.client.new:="DEMO"  //新接頭文字 ( クライアント )
+$prefix.client.old:="DEMO"  //旧接頭文字 ( クライアント )
+$prefix.client.new:="XXXX"  //新接頭文字 ( クライアント )
 $prefix.server:=New object:C1471
-$prefix.server.old:="XXXXS"  //旧接頭文字 ( サーバ )
-$prefix.server.new:="DEMOS"  //新接頭文字 ( サーバ )
+$prefix.server.old:="DEMOS"  //旧接頭文字 ( サーバ )
+$prefix.server.new:="XXXXS"  //新接頭文字 ( サーバ )
 
 var $isTest : Boolean
 var $i; $k; $sizeI; $sizeK : Integer

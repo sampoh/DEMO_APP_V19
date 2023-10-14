@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 //< 雛型とするためプレフィックスを変更 >
 
 //※1 絶対にgithubには反映しないでください。
@@ -7,8 +7,8 @@
 var $prefix : Object
 
 $prefix:=New object:C1471
-$prefix.old:="XXXXS"  //旧接頭文字
-$prefix.new:="DEMOS"  //新接頭文字
+$prefix.old:="DEMOS"  //旧接頭文字
+$prefix.new:="XXXXS"  //新接頭文字
 
 var $isTest : Boolean
 var $i; $k; $sizeI; $sizeK : Integer
