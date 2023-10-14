@@ -50,95 +50,16 @@
 		},
 		{
 			"objects": {
-				"LB_URL": {
-					"type": "listbox",
-					"top": 63,
-					"left": 20,
-					"width": 600,
-					"height": 397,
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"resizingMode": "legacy",
-					"rowHeightAutoMin": "20px",
-					"rowHeightAutoMax": "20px",
-					"scrollbarHorizontal": "automatic",
-					"method": "ObjectMethods/LB_URL.4dm",
-					"events": [
-						"onClick",
-						"onDoubleClick",
-						"onDataChange",
-						"onSelectionChange",
-						"onHeaderClick"
-					],
-					"columns": [
-						{
-							"name": "IDs",
-							"width": 120,
-							"minWidth": 10,
-							"maxWidth": 32000,
-							"enterable": false,
-							"visibility": "hidden",
-							"events": [
-								"onClick",
-								"onDataChange"
-							],
-							"header": {
-								"name": "Header2",
-								"text": "ID ( 非表示 )"
-							},
-							"footer": {
-								"name": "Footer2"
-							}
-						},
-						{
-							"name": "TITLEs",
-							"width": 200,
-							"minWidth": 10,
-							"maxWidth": 32000,
-							"events": [
-								"onClick",
-								"onDataChange"
-							],
-							"header": {
-								"name": "Header6",
-								"text": "TITLE"
-							},
-							"footer": {
-								"name": "Footer6"
-							}
-						},
-						{
-							"name": "URLs",
-							"width": 383,
-							"minWidth": 10,
-							"maxWidth": 32000,
-							"enterable": false,
-							"textAlign": "left",
-							"verticalAlign": "middle",
-							"events": [
-								"onClick",
-								"onDataChange"
-							],
-							"header": {
-								"name": "Header1",
-								"text": "URL"
-							},
-							"footer": {
-								"name": "Footer1"
-							}
-						}
-					]
-				},
-				"BTN_CLOSE": {
+				"BTN_LOGOUT1": {
 					"type": "button",
 					"top": 18,
 					"left": 512,
 					"width": 110,
 					"height": 31,
 					"sizingX": "move",
-					"text": "CLOSE",
+					"text": "LOGOUT",
 					"focusable": false,
-					"method": "ObjectMethods/BTN_CLOSE.4dm",
+					"method": "ObjectMethods/BTN_LOGOUT1.4dm",
 					"events": [
 						"onClick"
 					]
@@ -169,18 +90,6 @@
 						"onClick"
 					]
 				},
-				"progress_bg_001": {
-					"type": "picture",
-					"top": 60,
-					"left": 0,
-					"width": 640,
-					"height": 480,
-					"visibility": "hidden",
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"pictureFormat": "scaled",
-					"picture": "/RESOURCES/Images/library/gray.png"
-				},
 				"Thermometer_001": {
 					"type": "spinner",
 					"top": 224,
@@ -194,29 +103,81 @@
 						"onDataChange"
 					]
 				},
-				"Button": {
-					"type": "button",
-					"text": "DL",
-					"top": 18,
-					"left": 169,
-					"width": 48,
-					"height": 31,
+				"LB_URL": {
+					"type": "listbox",
+					"left": 20,
+					"top": 66,
+					"width": 600,
+					"height": 397,
 					"events": [
-						"onClick"
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
 					],
-					"method": "ObjectMethods/Button.4dm"
+					"listboxType": "collection",
+					"dataSource": "colSites",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"selectionMode": "single",
+					"method": "ObjectMethods/LB_URL.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "title",
+								"name": "Header7"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer7"
+							},
+							"dataSource": "This:C1470.title",
+							"width": 292,
+							"enterable": false,
+							"resizable": true,
+							"minWidth": 292
+						},
+						{
+							"header": {
+								"name": "Header8",
+								"text": "url"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer8"
+							},
+							"width": 292,
+							"dataSource": "This:C1470.url",
+							"enterable": false,
+							"minWidth": 292
+						}
+					]
 				},
-				"Button1": {
-					"type": "button",
-					"text": "Button",
-					"top": 18,
-					"left": 397,
-					"width": 64,
-					"height": 31,
+				"progress_bg_001": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 640,
+					"height": 480,
+					"visibility": "hidden",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/gray.png"
+				},
+				"Thermometer_1": {
+					"type": "spinner",
+					"top": 224,
+					"left": 304,
+					"width": 32,
+					"height": 32,
+					"visibility": "hidden",
+					"dataSource": "Thermometer",
 					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button1.4dm"
+						"onClick",
+						"onDataChange"
+					]
 				}
 			}
 		},
@@ -246,7 +207,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"dataSource": "voSite.title"
 				},
 				"detail_url": {
 					"type": "input",
@@ -259,7 +221,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"dataSource": "voSite.url"
 				},
 				"LB_META": {
 					"type": "listbox",
@@ -269,8 +232,6 @@
 					"height": 243,
 					"sizingX": "grow",
 					"sizingY": "grow",
-					"rowHeightAutoMin": "20px",
-					"rowHeightAutoMax": "20px",
 					"scrollbarHorizontal": "automatic",
 					"method": "ObjectMethods/LB_META.4dm",
 					"events": [
@@ -279,12 +240,13 @@
 						"onSelectionChange",
 						"onHeaderClick"
 					],
+					"listboxType": "collection",
+					"dataSource": "colMeta",
 					"columns": [
 						{
 							"name": "meta_group",
-							"dataSourceTypeHint": "number",
 							"width": 72,
-							"minWidth": 10,
+							"minWidth": 72,
 							"maxWidth": 32000,
 							"enterable": false,
 							"textAlign": "center",
@@ -299,12 +261,14 @@
 							},
 							"footer": {
 								"name": "Footer5"
-							}
+							},
+							"dataSource": "This:C1470.group",
+							"resizable": true
 						},
 						{
 							"name": "meta_name",
 							"width": 180,
-							"minWidth": 10,
+							"minWidth": 180,
 							"maxWidth": 32000,
 							"enterable": false,
 							"events": [
@@ -317,12 +281,14 @@
 							},
 							"footer": {
 								"name": "Footer3"
-							}
+							},
+							"dataSource": "This:C1470.attr",
+							"resizable": true
 						},
 						{
 							"name": "meta_value",
 							"width": 330,
-							"minWidth": 10,
+							"minWidth": 330,
 							"maxWidth": 32000,
 							"enterable": false,
 							"events": [
@@ -335,7 +301,8 @@
 							},
 							"footer": {
 								"name": "Footer4"
-							}
+							},
+							"dataSource": "This:C1470.value"
 						}
 					]
 				},
@@ -350,7 +317,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"dataSource": "voSite.description"
 				},
 				"Text": {
 					"type": "text",
@@ -416,7 +384,7 @@
 					"pictureFormat": "scaled",
 					"picture": "/RESOURCES/Images/library/gray.png"
 				},
-				"Thermometer_002": {
+				"Thermometer_2": {
 					"type": "spinner",
 					"top": 224,
 					"left": 304,
@@ -432,7 +400,7 @@
 			}
 		}
 	],
-	"geometryStamp": 14,
+	"geometryStamp": 229,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

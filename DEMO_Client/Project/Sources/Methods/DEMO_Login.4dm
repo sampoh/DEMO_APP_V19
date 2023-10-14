@@ -1,4 +1,4 @@
-//%attributes = {"folder":"DEMO","lang":"en","shared":true}
+﻿//%attributes = {}
 
 //↓必須パラメータ
 var $0; $voOUT : Object
@@ -41,7 +41,7 @@ Case of
 		$voOUT.method:="DEMOS_Login"
 		
 		//フォーム上の値を送信
-		$voOUT.form:=4DC_FORM_Save
+		$voOUT.form:=voLogin
 		
 	: ($action="progress")
 		
@@ -69,8 +69,6 @@ Case of
 		
 	: ($action="fail")
 		//< エラー時のみ実行 >
-		
-		//SCL_CMN_Error($voIN)
 		
 	: ($action="always")
 		//< 常時実行 >

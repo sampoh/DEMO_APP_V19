@@ -21,6 +21,7 @@
 		"onPluginArea",
 		"onDataChange",
 		"onDragOver",
+		"onCloseBox",
 		"onTimer",
 		"onAfterKeystroke",
 		"onResize",
@@ -65,7 +66,7 @@
 					"events": [
 						"onDataChange"
 					],
-					"dataSource": ""
+					"dataSource": "voLogin.account"
 				},
 				"password": {
 					"type": "input",
@@ -80,7 +81,7 @@
 					"events": [
 						"onDataChange"
 					],
-					"dataSource": ""
+					"dataSource": "voLogin.password"
 				},
 				"BTN_LOGIN": {
 					"type": "button",
@@ -97,18 +98,6 @@
 						"onClick"
 					]
 				},
-				"APP_NAME": {
-					"type": "text",
-					"top": 36,
-					"left": 0,
-					"width": 480,
-					"height": 32,
-					"textAlign": "center",
-					"fontFamily": "メイリオ",
-					"fontSize": 20,
-					"fontWeight": "bold",
-					"text": "4DC Sample Application"
-				},
 				"BTN_QUIT": {
 					"type": "button",
 					"top": 274,
@@ -123,11 +112,167 @@
 					"events": [
 						"onClick"
 					]
+				},
+				"Input2": {
+					"type": "input",
+					"left": 0,
+					"top": 40,
+					"width": 480,
+					"height": 24,
+					"dataSource": "Storage:C1525.version.appName+\" \"+Storage:C1525.version.numberString",
+					"enterable": false,
+					"fontFamily": "Meiryo",
+					"fontSize": 18,
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"fill": "transparent",
+					"borderStyle": "none"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "新しいバージョンがあります。\rアップデートしますか？",
+					"top": 61,
+					"left": 0,
+					"width": 480,
+					"height": 60,
+					"fontFamily": "Meiryo",
+					"fontSize": 18,
+					"textAlign": "center"
+				},
+				"Input": {
+					"type": "input",
+					"left": 60,
+					"top": 160,
+					"width": 360,
+					"height": 24,
+					"dataSource": "Storage:C1525.version.numberString+\"  >>>  \"+Storage:C1525.version.numberStringNew",
+					"enterable": false,
+					"fontFamily": "Meiryo",
+					"fontSize": 18,
+					"textAlign": "center",
+					"fontWeight": "normal"
+				},
+				"BTN_QUIT1": {
+					"type": "button",
+					"top": 254,
+					"left": 300,
+					"width": 120,
+					"height": 40,
+					"text": "NO",
+					"fontFamily": "メイリオ",
+					"fontSize": 16,
+					"focusable": false,
+					"method": "ObjectMethods/BTN_QUIT1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"BTN_START_UPDATE": {
+					"type": "button",
+					"top": 254,
+					"left": 60,
+					"width": 120,
+					"height": 40,
+					"text": "YES",
+					"fontFamily": "メイリオ",
+					"fontSize": 16,
+					"focusable": false,
+					"method": "ObjectMethods/BTN_START_UPDATE.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text1": {
+					"type": "text",
+					"text": "新しいアプリをダウンロード中",
+					"top": 77,
+					"left": 0,
+					"width": 480,
+					"height": 25,
+					"fontFamily": "Meiryo",
+					"fontSize": 18,
+					"textAlign": "center"
+				},
+				"Thermometer": {
+					"type": "progress",
+					"left": 60,
+					"top": 153,
+					"width": 360,
+					"height": 15,
+					"max": 100,
+					"dataSource": "voUpdate.progress"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 140,
+					"top": 175,
+					"width": 200,
+					"height": 29,
+					"enterable": false,
+					"dataSource": "voUpdate.text",
+					"fontFamily": "Meiryo",
+					"fontSize": 14,
+					"textAlign": "center",
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"BTN_CANCEL_UPDATE": {
+					"type": "button",
+					"top": 240,
+					"left": 140,
+					"width": 200,
+					"height": 40,
+					"text": "CANCEL",
+					"fontFamily": "メイリオ",
+					"fontSize": 16,
+					"focusable": false,
+					"method": "ObjectMethods/BTN_CANCEL_UPDATE.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"BTN_REBOOT": {
+					"type": "button",
+					"top": 215,
+					"left": 140,
+					"width": 200,
+					"height": 40,
+					"text": "再起動",
+					"fontFamily": "メイリオ",
+					"fontSize": 16,
+					"focusable": false,
+					"method": "ObjectMethods/BTN_REBOOT.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"text": "ダウンロードが完了しました。\rアプリケーションを再起動してください。",
+					"top": 91,
+					"left": 0,
+					"width": 480,
+					"height": 60,
+					"fontFamily": "Meiryo",
+					"fontSize": 18,
+					"textAlign": "center"
 				}
 			}
 		}
 	],
-	"geometryStamp": 14,
+	"geometryStamp": 273,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

@@ -1,9 +1,13 @@
-//※1 コンポーネント "4DS" , "4DC" 間の通信処理は
+﻿//※1 コンポーネント "4DS" , "4DC" 間の通信処理は
 //　　　"4DS_COM_OnWebConnection" 内または
 //　　　"4DS_COM_DEBUG_START" + "4DS_COM_DEBUG_END" 内で実施されます。
 //※2 "4DS_COM_OnWebConnection" の第1引数に True を渡す場合は、
 //　　　"4DS_COM_DEBUG_START" , "4DS_COM_DEBUG_END" および
 //　　　"EXECUTE METHOD" コマンドによる実装がないと正常に動作しないので気をつけてください。
+
+var TICK : Object  //テスト用
+TICK:=New object:C1471
+TICK.start:=Tickcount:C458
 
 var $1; $URL : Text
 

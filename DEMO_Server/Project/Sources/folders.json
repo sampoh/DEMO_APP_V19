@@ -1,32 +1,86 @@
 {
-	"DEMO": {
+	"DEMOS": {
 		"groups": [
-			"DEMO_Tables"
+			"DEMOS_App",
+			"DEMOS_BACKUP",
+			"DEMOS_Tables",
+			"DEMOS_クライアント管理"
 		],
 		"methods": [
-			"DEMO_Startup",
-			"DEMOS_Login"
+			"DEMOS_ErrMethod",
+			"DEMOS_Startup"
 		]
 	},
-	"DEMO_Tables": {
+	"DEMOS_App": {
+		"groups": [
+			"DEMOS_App_Lock"
+		],
+		"methods": [
+			"DEMOS_Common_EmptyObj",
+			"DEMOS_List",
+			"DEMOS_Login",
+			"DEMOS_Logout",
+			"DEMOS_Save_Detail",
+			"DEMOS_Show_Detail",
+			"DEMOS_Update_Session"
+		]
+	},
+	"DEMOS_App_Lock": {
+		"methods": [
+			"DEMOS_Local_Lock",
+			"DEMOS_Local_Unlock",
+			"DEMOS_Unlock"
+		]
+	},
+	"DEMOS_BACKUP": {
+		"methods": [
+			"DEMOS_GoogleJSON",
+			"DEMOS_Oauth_手動",
+			"DEMOS_OnBackupShutdown"
+		]
+	},
+	"DEMOS_Tables": {
 		"tables": [
 			"error",
 			"errorClient",
+			"lock",
+			"meta",
 			"session",
+			"sites",
 			"user"
 		],
 		"methods": [
-			"DEMO_Generate_IO_Form"
+			"DEMOS_Generate_IO_Form"
 		],
 		"forms": [
 			"[error]INPUT",
 			"[error]OUTPUT",
 			"[errorClient]INPUT",
 			"[errorClient]OUTPUT",
+			"[lock]INPUT",
+			"[lock]OUTPUT",
+			"[meta]INPUT",
+			"[meta]OUTPUT",
 			"[session]INPUT",
 			"[session]OUTPUT",
+			"[sites]INPUT",
+			"[sites]OUTPUT",
 			"[user]INPUT",
 			"[user]OUTPUT"
+		]
+	},
+	"DEMOS_クライアント管理": {
+		"methods": [
+			"DEMOS_Client_Download",
+			"DEMOS_NewClient",
+			"DEMOS_NewClient_OnErr",
+			"DEMOS_NewClient_Path",
+			"DEMOS_NewClient_Sub"
+		]
+	},
+	"雛型アプリ生成": {
+		"methods": [
+			"Edit_ProjectPrefix"
 		]
 	},
 	"汎用": {

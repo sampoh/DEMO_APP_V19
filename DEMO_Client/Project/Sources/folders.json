@@ -2,21 +2,39 @@
 	"DEMO": {
 		"groups": [
 			"DEMO_App",
-			"DEMO_Storage"
+			"DEMO_Storage",
+			"DEMO_バージョン管理"
 		],
 		"methods": [
-			"DEMO_Start",
-			"メソッド8"
+			"DEMO_Compiler",
+			"DEMO_Compiler_Err",
+			"DEMO_Menu",
+			"DEMO_Start"
 		]
 	},
 	"DEMO_App": {
+		"groups": [
+			"DEMO_App_Lock"
+		],
 		"methods": [
-			"DEMO_Compiler",
 			"DEMO_ErrMethod",
-			"DEMO_Login"
+			"DEMO_HTML_Analyze",
+			"DEMO_List",
+			"DEMO_Login",
+			"DEMO_Logout",
+			"DEMO_Save_Detail",
+			"DEMO_Show_Detail",
+			"DEMO_Toggle_Progress"
 		],
 		"forms": [
-			"DEMO_Login"
+			"DEMO_List",
+			"DEMO_Login",
+			"DEMO_Menu"
+		]
+	},
+	"DEMO_App_Lock": {
+		"methods": [
+			"DEMO_Unlock"
 		]
 	},
 	"DEMO_Storage": {
@@ -24,6 +42,20 @@
 			"DEMO_Storage_LoggedIn",
 			"DEMO_Storage_Quit",
 			"DEMO_Storage_SessionId"
+		]
+	},
+	"DEMO_バージョン管理": {
+		"methods": [
+			"DEMO_Check_Update",
+			"DEMO_Check_Update_HTTP",
+			"DEMO_Client_Download",
+			"DEMO_Get_4DZ_Path",
+			"DEMO_Version"
+		]
+	},
+	"雛型アプリ生成": {
+		"methods": [
+			"Edit_ProjectPrefix"
 		]
 	},
 	"汎用": {

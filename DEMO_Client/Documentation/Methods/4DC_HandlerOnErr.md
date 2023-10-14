@@ -1,0 +1,1 @@
+"4DC_Handler" 内のON ERR CALL用メソッド

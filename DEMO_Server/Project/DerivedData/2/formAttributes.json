@@ -1,11 +1,11 @@
 {
 	"forms": {
 		"INPUT": {
-			"timeStamp": "2023-10-06T18:22:19.731Z",
+			"timeStamp": "2023-10-11T09:57:25.107Z",
 			"destination": "detailScreen"
 		},
 		"OUTPUT": {
-			"timeStamp": "2023-10-06T18:22:19.732Z",
+			"timeStamp": "2023-10-11T09:57:25.107Z",
 			"destination": "listScreen"
 		}
 	}

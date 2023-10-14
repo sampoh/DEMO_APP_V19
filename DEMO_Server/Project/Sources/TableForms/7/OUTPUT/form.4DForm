@@ -1,0 +1,378 @@
+﻿{
+	"bottomMargin": 10,
+	"destination": "listScreen",
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onPrintingDetail",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke",
+		"onLoadRecord",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"markerBody": 46,
+	"markerBreak": 51,
+	"markerFooter": 51,
+	"markerHeader": 24,
+	"pageFormat": {
+		"paperHeight": "841pt",
+		"paperName": "A4",
+		"paperWidth": "595pt"
+	},
+	"rightMargin": 16,
+	"pages": [
+		null,
+		{
+			"objects": {
+				"headerBg": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 0,
+					"width": 990,
+					"height": 22,
+					"fill": "#ECEADB",
+					"stroke": "transparent",
+					"sizingX": "grow"
+				},
+				"bodyBg": {
+					"type": "rectangle",
+					"top": 25,
+					"left": 0,
+					"width": 990,
+					"height": 22,
+					"fill": "#FFFFFF",
+					"stroke": "transparent",
+					"sizingX": "grow"
+				},
+				"headerLine": {
+					"type": "line",
+					"top": 23,
+					"left": 0,
+					"width": 990,
+					"height": 0,
+					"stroke": "#c0c0c0",
+					"sizingX": "grow"
+				},
+				"S1_テキスト": {
+					"height": 15,
+					"left": 15,
+					"sizingX": "grow",
+					"text": "ID : ",
+					"top": 7,
+					"type": "text",
+					"width": 60
+				},
+				"S1_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[lock:7]ID:1",
+					"dataSourceTypeHint": "integer",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 15,
+					"top": 28,
+					"type": "input",
+					"width": 60
+				},
+				"S2_テキスト": {
+					"height": 15,
+					"left": 87,
+					"sizingX": "grow",
+					"text": "ID_user : ",
+					"top": 7,
+					"type": "text",
+					"width": 60
+				},
+				"S2_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[lock:7]ID_user:2",
+					"dataSourceTypeHint": "integer",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 87,
+					"top": 28,
+					"type": "input",
+					"width": 60
+				},
+				"S3_テキスト": {
+					"height": 15,
+					"left": 159,
+					"sizingX": "grow",
+					"text": "ID_session : ",
+					"top": 7,
+					"type": "text",
+					"width": 60
+				},
+				"S3_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[lock:7]ID_session:3",
+					"dataSourceTypeHint": "integer",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 159,
+					"top": 28,
+					"type": "input",
+					"width": 60
+				},
+				"S4_テキスト": {
+					"height": 15,
+					"left": 231,
+					"sizingX": "grow",
+					"text": "name : ",
+					"top": 7,
+					"type": "text",
+					"width": 245
+				},
+				"S4_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[lock:7]name:4",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 231,
+					"top": 28,
+					"type": "input",
+					"width": 245
+				},
+				"S5_テキスト": {
+					"height": 15,
+					"left": 488,
+					"sizingX": "grow",
+					"text": "value : ",
+					"top": 7,
+					"type": "text",
+					"width": 245
+				},
+				"S5_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[lock:7]value:5",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 488,
+					"top": 28,
+					"type": "input",
+					"width": 245
+				},
+				"S6_テキスト": {
+					"height": 15,
+					"left": 745,
+					"sizingX": "grow",
+					"text": "datetime : ",
+					"top": 7,
+					"type": "text",
+					"width": 245
+				},
+				"S6_フィールド": {
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"dataSource": "[lock:7]datetime:6",
+					"dragging": "none",
+					"dropping": "none",
+					"sizingX": "grow",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"height": 16,
+					"left": 745,
+					"top": 28,
+					"type": "input",
+					"width": 245
+				},
+				"S2_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 80,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S3_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 152,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S4_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 224,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S5_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 481,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S6_スプリッター": {
+					"action": "automaticSplitter",
+					"display": false,
+					"events": [
+						"onClick"
+					],
+					"height": 50,
+					"left": 738,
+					"top": 0,
+					"type": "button",
+					"width": 3
+				},
+				"S2_Line": {
+					"height": 46,
+					"left": 81,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				},
+				"S3_Line": {
+					"height": 46,
+					"left": 153,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				},
+				"S4_Line": {
+					"height": 46,
+					"left": 225,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				},
+				"S5_Line": {
+					"height": 46,
+					"left": 482,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				},
+				"S6_Line": {
+					"height": 46,
+					"left": 739,
+					"stroke": "#A8A8A8",
+					"top": 2,
+					"type": "line"
+				}
+			}
+		}
+	]
+}

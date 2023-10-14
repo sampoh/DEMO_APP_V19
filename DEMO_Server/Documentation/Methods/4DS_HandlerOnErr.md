@@ -1,0 +1,1 @@
+"4DS_Handler" 内のON ERR CALL用メソッド

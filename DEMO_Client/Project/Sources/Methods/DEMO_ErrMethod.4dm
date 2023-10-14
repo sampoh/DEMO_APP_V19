@@ -1,4 +1,4 @@
-//%attributes = {}
+﻿//%attributes = {}
 
 var $errCode : Integer
 var $errMethod : Text
@@ -47,12 +47,19 @@ For ($i; 1; $sizeI)
 	
 End for 
 
+//最終エラーを Storage に残す ( インタープロセス )
 Use (Storage:C1525.error)
 	Storage:C1525.error.errCode:=$errCode
 	Storage:C1525.error.errMethod:=$errMethod
 	Storage:C1525.error.stack:=$colStack.copy(ck shared:K85:29; Storage:C1525.error)
 	Storage:C1525.error.datetime:=$DT
 End use 
+
+//プロセス単位
+voError.errCode:=$errCode
+voError.errMethod:=$errMethod
+voError.stack:=$colStack.copy()
+voError.datetime:=$DT
 
 4DC_LOG_Remote(->$atDT; ->$atMSG)
 

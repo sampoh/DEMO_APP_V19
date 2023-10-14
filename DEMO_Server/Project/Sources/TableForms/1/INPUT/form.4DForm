@@ -51,9 +51,9 @@
 	"markerBreak": 692,
 	"markerFooter": 702,
 	"pageFormat": {
-		"pagerHeight": "841pt",
-		"pagerName": "A4",
-		"pagerWidth": "595pt"
+		"paperHeight": "841pt",
+		"paperName": "A4",
+		"paperWidth": "595pt"
 	},
 	"rightMargin": 20,
 	"pages": [

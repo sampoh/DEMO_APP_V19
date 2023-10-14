@@ -32,15 +32,44 @@
 	"markerFooter": 51,
 	"markerHeader": 24,
 	"pageFormat": {
-		"pagerHeight": "841pt",
-		"pagerName": "A4",
-		"pagerWidth": "595pt"
+		"paperHeight": "841pt",
+		"paperName": "A4",
+		"paperWidth": "595pt"
 	},
 	"rightMargin": 16,
 	"pages": [
 		null,
 		{
 			"objects": {
+				"headerBg": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 0,
+					"width": 589,
+					"height": 22,
+					"fill": "#ECEADB",
+					"stroke": "transparent",
+					"sizingX": "grow"
+				},
+				"bodyBg": {
+					"type": "rectangle",
+					"top": 25,
+					"left": 0,
+					"width": 589,
+					"height": 22,
+					"fill": "#FFFFFF",
+					"stroke": "transparent",
+					"sizingX": "grow"
+				},
+				"headerLine": {
+					"type": "line",
+					"top": 23,
+					"left": 0,
+					"width": 589,
+					"height": 0,
+					"stroke": "#c0c0c0",
+					"sizingX": "grow"
+				},
 				"S1_テキスト": {
 					"height": 15,
 					"left": 15,
