@@ -6,7 +6,7 @@ ARRAY TEXT:C222($atFilterURLs; 0)
 ARRAY BOOLEAN:C223($abAllow; 0)
 
 var $URL : Text
-var $DOMAIN; $URL4D; $GROUP : Text
+var $DOMAIN; $ACTION; $GROUP : Text
 var $JSON : Text
 
 ARRAY LONGINT:C221($alPosFound; 0)
@@ -39,10 +39,10 @@ Case of
 		Case of 
 			: (Match regex:C1019("^http://(liquidsystem)/(.*?)$"; $URL; 1; $alPosFound; $alLenFound))
 				$DOMAIN:=Substring:C12($URL; $alPosFound{1}; $alLenFound{1})
-				$URL4D:=Substring:C12($URL; $alPosFound{2}; $alLenFound{2})
+				$ACTION:=Substring:C12($URL; $alPosFound{2}; $alLenFound{2})
 			: (Match regex:C1019("^http://(liquidmenu)/(.*?)\\?group=(.*?)$"; $URL; 1; $alPosFound; $alLenFound))
 				$DOMAIN:=Substring:C12($URL; $alPosFound{1}; $alLenFound{1})
-				$URL4D:=Substring:C12($URL; $alPosFound{2}; $alLenFound{2})
+				$ACTION:=Substring:C12($URL; $alPosFound{2}; $alLenFound{2})
 				$GROUP:=Substring:C12($URL; $alPosFound{3}; $alLenFound{3})
 		End case 
 		
@@ -52,7 +52,7 @@ Case of
 	: ($DOMAIN="liquidsystem")
 		
 		Case of 
-			: ($URL4D="load")
+			: ($ACTION="load")
 				$JSON:=JSON Stringify:C1217(Storage:C1525.menu.data)
 				WA EXECUTE JAVASCRIPT FUNCTION:C1043(*; $WA_NAME; "loadData"; *; $JSON)
 		End case 
@@ -60,24 +60,35 @@ Case of
 		
 	: ($DOMAIN="liquidmenu")
 		
+		//以下 "DEMO_Menu_Cast" の定義内容と連動
+		
 		Case of 
-			: ($URL4D="analyze_sites")
+			: ($GROUP="group_001")
 				
-				//"DEMO_Window_Detect" および "DEMO_Window_Append" は1つしか開かせない制御。
-				//もし制限不要であれば単純に開けばよい
-				
-				If (DEMO_Window_Detect($URL4D; ->$process))
-					BRING TO FRONT:C326($process)
-				Else 
-					$FORM:="DEMO_List"
-					$TITLE:="DEMO Client - List"
-					$process:=DEMO_Menu_Win($URL4D; $FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18)
-					DEMO_Window_Append($URL4D; $process)
-				End if 
+				Case of 
+					: ($ACTION="analyze_sites")  //シングルウインドウ
+						
+						//"DEMO_Window_Detect" および "DEMO_Window_Append" は1つしか開かせない制御。
+						If (DEMO_Window_Detect($ACTION; ->$process))
+							BRING TO FRONT:C326($process)
+						Else 
+							$FORM:="DEMO_List"
+							$TITLE:="DEMO Client - List"
+							$process:=DEMO_Menu_Win($ACTION; $FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18)
+							DEMO_Window_Append($ACTION; $process)
+						End if 
+						
+					: ($ACTION="multi_test")  //マルチウインドウ
+						
+						//いくつでも開かせる場合は "DEMO_Menu_Win_Multi" 内でプロセス名接頭子を統一 ( ログアウト時にまとめて閉じるため )
+						$FORM:="DEMO_Multi"
+						$TITLE:="DEMO Multi"
+						DEMO_Menu_Win_Multi($FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18)
+						
+				End case 
 				
 			Else 
 				ALERT:C41("これはダミー項目です。")
-				
 		End case 
 		
 End case 

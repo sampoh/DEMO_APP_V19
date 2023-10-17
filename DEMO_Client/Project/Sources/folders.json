@@ -24,6 +24,9 @@
 			"DEMO_Menu",
 			"DEMO_Menu_Cast",
 			"DEMO_Menu_Win",
+			"DEMO_Menu_Win_Multi",
+			"DEMO_Menu_Win_Multi_Name",
+			"DEMO_Menu_Win_Multi_P",
 			"DEMO_Menu_Win_P",
 			"DEMO_Save_Detail",
 			"DEMO_Show_Detail",
@@ -38,7 +41,8 @@
 		"forms": [
 			"DEMO_List",
 			"DEMO_Login",
-			"DEMO_Menu"
+			"DEMO_Menu",
+			"DEMO_Multi"
 		]
 	},
 	"DEMO_App_Lock": {

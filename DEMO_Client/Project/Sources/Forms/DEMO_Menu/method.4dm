@@ -21,9 +21,9 @@ Case of
 		If (4DC_Confirm("ログアウトします。\r\nよろしいですか？"; "はい"; "いいえ"))
 			
 			//機能ごとの窓があればまとめて閉じる
-			If (DEMO_Window_Visible(->$colWin))
-				DEMO_Window_CloseAll($colWin)
-			End if 
+			$colWin:=New collection:C1472
+			DEMO_Window_Visible(->$colWin)
+			DEMO_Window_CloseAll($colWin)
 			
 			4DC_COM_Logout("DEMO_Logout")
 			

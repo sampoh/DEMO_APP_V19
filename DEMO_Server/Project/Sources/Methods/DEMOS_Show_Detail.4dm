@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 var $0; $voOUT : Object
 var $1; $voIN : Object
@@ -14,7 +14,7 @@ $sitesEntity:=ds:C1482.sites.query("ID = :1"; $voIN.ID).first()
 $metaEntitySel:=ds:C1482.meta.query("ID_sites = :1"; $voIN.ID).orderBy("group asc")
 
 If ($voIN.ID>0)
-	DEMOS_Local_Lock(Table name:C256(->[sites:5]); String:C10($voIN.ID))
+	DEMOS_Local_Lock(Table name:C256(->[sites:5]); String:C10($voIN.ID))  //name&value方式でロック
 End if 
 
 $voOUT:=New object:C1471

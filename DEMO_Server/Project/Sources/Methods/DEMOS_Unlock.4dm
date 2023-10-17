@@ -1,4 +1,5 @@
-﻿//%attributes = {}
+//%attributes = {}
+//name&value方式のロックを解除
 
 var $0; $voOUT : Object
 var $1; $voIN : Object
