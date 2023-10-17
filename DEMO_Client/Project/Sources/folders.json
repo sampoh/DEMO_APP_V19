@@ -8,7 +8,6 @@
 		"methods": [
 			"DEMO_Compiler",
 			"DEMO_Compiler_Err",
-			"DEMO_Menu",
 			"DEMO_Start"
 		]
 	},
@@ -22,9 +21,19 @@
 			"DEMO_List",
 			"DEMO_Login",
 			"DEMO_Logout",
+			"DEMO_Menu",
+			"DEMO_Menu_Cast",
+			"DEMO_Menu_Win",
+			"DEMO_Menu_Win_P",
 			"DEMO_Save_Detail",
 			"DEMO_Show_Detail",
-			"DEMO_Toggle_Progress"
+			"DEMO_Toggle_Progress",
+			"DEMO_Window_Append",
+			"DEMO_Window_Cast",
+			"DEMO_Window_Close",
+			"DEMO_Window_CloseAll",
+			"DEMO_Window_Detect",
+			"DEMO_Window_Visible"
 		],
 		"forms": [
 			"DEMO_List",
@@ -61,6 +70,7 @@
 	"汎用": {
 		"methods": [
 			"4DC_WIN_FORM",
+			"Col_FindName",
 			"Convert_OldCastToNewCast"
 		]
 	},

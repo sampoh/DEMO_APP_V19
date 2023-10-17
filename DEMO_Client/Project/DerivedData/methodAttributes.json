@@ -10,11 +10,14 @@
 			"timeStamp": "2023-10-14T16:03:01.991Z"
 		},
 		"4DC_WIN_FORM": {
-			"timeStamp": "2023-10-14T16:03:01.992Z",
+			"timeStamp": "2023-10-17T07:10:25.544Z",
 			"attributes": {
 				"folder": "汎用",
 				"lang": "en"
 			}
+		},
+		"Col_FindName": {
+			"timeStamp": "2023-10-16T19:51:10.374Z"
 		},
 		"Convert_OldCastToNewCast": {
 			"timeStamp": "2023-10-14T16:03:01.993Z"
@@ -29,7 +32,7 @@
 			"timeStamp": "2023-10-14T16:03:01.996Z"
 		},
 		"DEMO_Compiler": {
-			"timeStamp": "2023-10-14T16:03:01.997Z"
+			"timeStamp": "2023-10-16T19:30:28.899Z"
 		},
 		"DEMO_Compiler_Err": {
 			"timeStamp": "2023-10-14T16:03:01.999Z"
@@ -44,7 +47,7 @@
 			"timeStamp": "2023-10-14T16:03:02.002Z"
 		},
 		"DEMO_List": {
-			"timeStamp": "2023-10-14T16:03:02.003Z",
+			"timeStamp": "2023-10-15T18:11:43.950Z",
 			"attributes": {
 				"folder": "DEMO",
 				"lang": "en",
@@ -61,7 +64,16 @@
 			}
 		},
 		"DEMO_Menu": {
-			"timeStamp": "2023-10-14T16:03:02.006Z"
+			"timeStamp": "2023-10-17T07:19:15.914Z"
+		},
+		"DEMO_Menu_Cast": {
+			"timeStamp": "2023-10-17T07:19:59.614Z"
+		},
+		"DEMO_Menu_Win": {
+			"timeStamp": "2023-10-16T19:57:56.655Z"
+		},
+		"DEMO_Menu_Win_P": {
+			"timeStamp": "2023-10-15T18:36:16.052Z"
 		},
 		"DEMO_Save_Detail": {
 			"timeStamp": "2023-10-14T16:03:02.008Z"
@@ -70,7 +82,7 @@
 			"timeStamp": "2023-10-14T16:03:02.009Z"
 		},
 		"DEMO_Start": {
-			"timeStamp": "2023-10-14T16:03:02.010Z"
+			"timeStamp": "2023-10-17T07:10:50.574Z"
 		},
 		"DEMO_Storage_LoggedIn": {
 			"timeStamp": "2023-10-14T16:03:02.011Z"
@@ -90,11 +102,26 @@
 		"DEMO_Version": {
 			"timeStamp": "2023-10-14T16:03:02.016Z"
 		},
+		"DEMO_Window_Append": {
+			"timeStamp": "2023-10-16T19:44:36.286Z"
+		},
+		"DEMO_Window_Cast": {
+			"timeStamp": "2023-10-16T19:31:31.942Z"
+		},
+		"DEMO_Window_Close": {
+			"timeStamp": "2023-10-17T09:19:46.783Z"
+		},
+		"DEMO_Window_CloseAll": {
+			"timeStamp": "2023-10-17T09:45:02.395Z"
+		},
+		"DEMO_Window_Detect": {
+			"timeStamp": "2023-10-16T20:15:07.522Z"
+		},
+		"DEMO_Window_Visible": {
+			"timeStamp": "2023-10-17T09:17:56.021Z"
+		},
 		"Edit_ProjectPrefix": {
 			"timeStamp": "2023-10-14T16:05:20.398Z"
-		},
-		"(メソッド25)": {
-			"timeStamp": "2023-10-13T23:49:09.750Z"
 		}
 	}
 }

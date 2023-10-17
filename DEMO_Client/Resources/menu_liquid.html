@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link href="bootstrap-5.3.0-dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="jquery/jquery-3.7.1.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function(){
+	location.href = 'http://liquidsystem/load';
+}
+
+function loadData(input){
+	let data = JSON.parse(input);
+	for(let i=0;i < data.group.length;i++){
+		let elemCol = $('<div>').addClass('col').append(
+				$('<h5>').css({'margin-bottom':'10px','border-bottom':'1px solid'}).text(data.group[i].title)
+		);
+		for(let k=0;k < data.group[i].list.length;k++){
+			elemCol.append(
+				$('<a>').addClass('btn btn-outline-secondary btn-lg').attr('href','http://liquidmenu/' + data.group[i].list[k].action + '?group=' + data.group[i].name).text(data.group[i].list[k].title)
+			);
+		}
+		if((i + 1) < data.group.length){
+			$('#target_col').append(
+				$('<div>').addClass('row').css({'margin-bottom':'5px'}).append(elemCol)
+			);
+		}else{
+			$('#target_col').append(
+				$('<div>').addClass('row').append(elemCol)
+			);
+		}
+	}
+}
+
+</script>
+<style type="text/css">
+<!--
+
+/*
+html{overflow-y:scroll;}
+html,body{height:100%;}
+*/
+
+.btn{margin-right:10px;margin-bottom:15px;}
+
+-->
+</style>
+</head>
+<body>
+<div class="container-fluid" style="margin-top:10px">
+	<div class="row">
+		<div class="col" id="target_col"></div>
+	</div>
+</div>
+</body>
+</html>

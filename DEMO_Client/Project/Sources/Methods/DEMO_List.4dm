@@ -1,4 +1,4 @@
-﻿//%attributes = {"folder":"DEMO","lang":"en","shared":true}
+//%attributes = {"folder":"DEMO","lang":"en","shared":true}
 
 //↓必須パラメータ
 var $0; $voOUT : Object

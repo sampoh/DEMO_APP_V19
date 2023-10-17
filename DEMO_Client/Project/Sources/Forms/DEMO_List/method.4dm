@@ -1,4 +1,4 @@
-﻿
+
 var $RESIZABLE : Boolean
 var $minWidth; $minHeight : Integer
 
@@ -19,6 +19,10 @@ Case of
 		
 		//一覧ロードのための通信処理
 		4DC_COM_Add("DEMO_List")
+		
+	: (Form event code:C388=On Close Box:K2:21)
+		
+		CANCEL:C270
 		
 	: (Form event code:C388=On Unload:K2:2)
 		

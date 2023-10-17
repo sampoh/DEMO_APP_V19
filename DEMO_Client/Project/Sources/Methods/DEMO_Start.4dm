@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 //< 基本コーディングルール >
 //　・ インタープロセス変数は全面的に使用禁止
@@ -45,9 +45,12 @@ If ($Connected)
 			
 			If (Storage:C1525.system.loggedIn)
 				//"DEMO_List" フォームを元にウィンドウ生成
-				$FORM:="DEMO_List"
-				$TITLE:="DEMO Client - List"
-				4DC_WIN_FORM($FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18)
+				//$FORM:="DEMO_List"
+				//$TITLE:="DEMO Client - List"
+				//↓メニューに変更
+				$FORM:="DEMO_Menu"
+				$TITLE:="MAIN MENU"
+				4DC_WIN_FORM($FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18; False:C215; False:C215; On the left:K39:2; At the top:K39:5)
 			End if 
 			
 		End if 

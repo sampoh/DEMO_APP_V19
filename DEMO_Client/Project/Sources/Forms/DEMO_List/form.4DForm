@@ -18,6 +18,7 @@
 		"onPluginArea",
 		"onDataChange",
 		"onDragOver",
+		"onCloseBox",
 		"onUnload",
 		"onTimer",
 		"onAfterKeystroke",
@@ -50,16 +51,16 @@
 		},
 		{
 			"objects": {
-				"BTN_LOGOUT1": {
+				"BTN_CLOSE1": {
 					"type": "button",
 					"top": 18,
 					"left": 512,
 					"width": 110,
 					"height": 31,
 					"sizingX": "move",
-					"text": "LOGOUT",
+					"text": "CLOSE",
 					"focusable": false,
-					"method": "ObjectMethods/BTN_LOGOUT1.4dm",
+					"method": "ObjectMethods/BTN_CLOSE1.4dm",
 					"events": [
 						"onClick"
 					]
@@ -400,7 +401,7 @@
 			}
 		}
 	],
-	"geometryStamp": 229,
+	"geometryStamp": 258,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

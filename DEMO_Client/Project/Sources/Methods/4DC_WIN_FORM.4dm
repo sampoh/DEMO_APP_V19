@@ -1,4 +1,4 @@
-﻿//%attributes = {"folder":"汎用","lang":"en"}
+//%attributes = {"folder":"汎用","lang":"en"}
 //< フォームを元にしたウインドウ生成 >
 
 //第1引数 ( 必須 ) : プロジェクトフォーム名 【 テキスト型 】
@@ -16,10 +16,12 @@ var $2; $TITLE : Text
 var $3; $WIN_TYPE : Integer
 var $4; $ON_CURRENT_WIN : Boolean
 var $5; $KEEP_POSITION : Boolean
+var $6; $LEFT : Integer
+var $7; $TOP : Integer
 
 var $fWidth; $fHeight : Integer
 var $scWidth; $scHeight : Integer
-var $LEFT; $TOP; $RIGHT; $BOTTOM : Integer
+var $RIGHT; $BOTTOM : Integer
 var $winRef : Integer
 
 $execute:=(Count parameters:C259>=1)
@@ -53,10 +55,17 @@ If ($execute)
 	$scWidth:=Screen width:C187(*)
 	$scHeight:=Screen height:C188(*)
 	
-	$LEFT:=($scWidth-$fWidth)/2
-	$TOP:=(($scHeight-$fHeight)/2)-10
-	$RIGHT:=$LEFT+$fWidth
-	$BOTTOM:=$TOP+$fHeight
+	If (Count parameters:C259>=6)
+		$LEFT:=$6
+	Else 
+		$LEFT:=($scWidth-$fWidth)/2
+	End if 
+	
+	If (Count parameters:C259>=7)
+		$TOP:=$7
+	Else 
+		$TOP:=(($scHeight-$fHeight)/2)-10
+	End if 
 	
 	If ($KEEP_POSITION)
 		$winRef:=Open form window:C675($FORM; $WIN_TYPE; $LEFT; $TOP; *)
