@@ -84,6 +84,12 @@
 			"DEMOS_NewClient_Sub"
 		]
 	},
+	"DEVELOP": {
+		"methods": [
+			"Merge_4DS",
+			"Merge_4DS_Sub"
+		]
+	},
 	"雛型アプリ生成": {
 		"methods": [
 			"Edit_ProjectPrefix"

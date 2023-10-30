@@ -48,15 +48,15 @@
 				"BTN_CANCEL": {
 					"type": "button",
 					"text": "CANCEL",
-					"top": 275,
-					"left": 360,
-					"width": 111,
-					"height": 37,
+					"top": 215,
+					"left": 160,
+					"width": 160,
+					"height": 57,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/BTN_CANCEL.4dm",
-					"fontSize": 14
+					"fontSize": 18
 				},
 				"Text": {
 					"type": "text",
@@ -72,5 +72,5 @@
 			}
 		}
 	],
-	"geometryStamp": 27
+	"geometryStamp": 64
 }

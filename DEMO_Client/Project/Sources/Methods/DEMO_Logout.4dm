@@ -1,4 +1,4 @@
-﻿//%attributes = {"shared":true}
+//%attributes = {"shared":true}
 
 //↓必須パラメータ
 var $0; $voOUT : Object
@@ -8,6 +8,7 @@ var $3; $TIPS : Object
 //↑必須パラメータ
 
 var $loggedout : Boolean
+var $colWin : Collection
 
 $action:=$1
 
@@ -18,6 +19,11 @@ End if
 Case of 
 	: ($action="before")
 		//< 事前処理 >
+		
+		//子窓があればまとめて閉じる
+		$colWin:=New collection:C1472
+		DEMO_Window_Visible(->$colWin)
+		DEMO_Window_CloseAll($colWin)
 		
 	: ($action="set")
 		//< 値の送信 >

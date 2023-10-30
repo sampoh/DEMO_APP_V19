@@ -66,6 +66,12 @@
 			"DEMO_Version"
 		]
 	},
+	"DEVELOP": {
+		"methods": [
+			"Merge_4DC",
+			"Merge_4DC_Sub"
+		]
+	},
 	"雛型アプリ生成": {
 		"methods": [
 			"Edit_ProjectPrefix"
