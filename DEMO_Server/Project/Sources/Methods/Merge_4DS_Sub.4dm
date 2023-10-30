@@ -121,6 +121,6 @@ If ($execute)
 		
 	End for 
 	
-	ALERT:C41("Complete.")
+	ALERT:C41("4DSのソースを当プロジェクトに統合しました。4DSコンポーネントを削除して再起動してください。")
 	
 End if 
