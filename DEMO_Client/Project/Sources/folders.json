@@ -13,7 +13,8 @@
 	},
 	"DEMO_App": {
 		"groups": [
-			"DEMO_App_Lock"
+			"DEMO_App_Lock",
+			"DEMO_Window"
 		],
 		"methods": [
 			"DEMO_App",
@@ -31,13 +32,7 @@
 			"DEMO_Menu_Win_P",
 			"DEMO_Save_Detail",
 			"DEMO_Show_Detail",
-			"DEMO_Toggle_Progress",
-			"DEMO_Window_Append",
-			"DEMO_Window_Cast",
-			"DEMO_Window_Close",
-			"DEMO_Window_CloseAll",
-			"DEMO_Window_Detect",
-			"DEMO_Window_Visible"
+			"DEMO_Toggle_Progress"
 		],
 		"forms": [
 			"DEMO_List",
@@ -56,6 +51,16 @@
 			"DEMO_Storage_LoggedIn",
 			"DEMO_Storage_Quit",
 			"DEMO_Storage_SessionId"
+		]
+	},
+	"DEMO_Window": {
+		"methods": [
+			"DEMO_Window_Append",
+			"DEMO_Window_Cast",
+			"DEMO_Window_Close",
+			"DEMO_Window_CloseAll",
+			"DEMO_Window_Detect",
+			"DEMO_Window_Visible"
 		]
 	},
 	"DEMO_バージョン管理": {

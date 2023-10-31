@@ -31,7 +31,9 @@ If ($execute)
 	Else 
 		$WIN_TYPE:=Plain window:K34:13
 	End if 
-	$process:=New process:C317("DEMO_Menu_Win_P"; 0; $name; $FORM; $TITLE; $WIN_TYPE)
+	//$process:=New process("DEMO_Menu_Win_P"; 0; $name; $FORM; $TITLE; $WIN_TYPE)
+	//↓フォームの有無に依存せず通信できるようワーカー化
+	CALL WORKER:C1389($name; "DEMO_Menu_Win_P"; $FORM; $TITLE; $WIN_TYPE)
 Else 
 	$process:=-1
 End if 

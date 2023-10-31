@@ -1,20 +1,20 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 var $0; $RESULT : Object
-var $1; $BASE_URL : Text
 
+var $voOpt : Object
 var $voJSON : Object
 var $FLG_UPDATE : Boolean
 var $FLG_SUCCESS : Boolean
 
-$BASE_URL:=$1
+$voOpt:=4DC_COM_Get_Option
 
 $RESULT:=New object:C1471
 $RESULT.result:=False:C215
 $RESULT.update:=False:C215
 
 //バージョンチェック通信
-$RESULT.result:=DEMO_Check_Update_HTTP($BASE_URL; ->$voJSON)
+$RESULT.result:=DEMO_Check_Update_HTTP($voOpt.url; ->$voJSON)
 
 If ($RESULT.result)
 	$RESULT.update:=($voJSON.numberString#Storage:C1525.version.numberString)

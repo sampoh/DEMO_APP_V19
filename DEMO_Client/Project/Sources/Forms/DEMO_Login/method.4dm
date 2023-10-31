@@ -1,5 +1,6 @@
-﻿
+
 var $voFORM : Object
+var $msg : Text
 
 Case of 
 	: (Form event code:C388=On Load:K2:1)
@@ -10,7 +11,15 @@ Case of
 		voLogin.password:="1234"
 		
 		If (Storage:C1525.version.update)
-			FORM GOTO PAGE:C247(2)
+			If (Is compiled mode:C492)
+				FORM GOTO PAGE:C247(2)
+			Else 
+				//※ インタプリタ時にはバージョンアップを強制しない
+				$msg:="現在のバージョン : "+Storage:C1525.version.numberString+"\r"
+				$msg:=$msg+"最新版バージョン : "+Storage:C1525.version.numberStringNew+"\r"
+				$msg:=$msg+"( ※ インタプリタ時にはバージョンアップせず続行します )"
+				ALERT:C41($msg)
+			End if 
 		End if 
 		
 	: (Form event code:C388=On Page Change:K2:54)

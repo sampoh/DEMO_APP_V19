@@ -17,10 +17,8 @@ $Connected:=4DC($URL)
 
 If ($Connected)
 	
-	If (Is compiled mode:C492)
-		//アップデートチェック
-		DEMO_Check_Update($URL)
-	End if 
+	//アップデートチェック
+	DEMO_Check_Update
 	
 	//共有ストレージ ( インタープロセス変数の後継機能 )
 	DEMO_Storage_Quit(False:C215)  //Storage.system.quit に False をセット
