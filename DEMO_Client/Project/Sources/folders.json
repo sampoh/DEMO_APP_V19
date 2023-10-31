@@ -16,6 +16,7 @@
 			"DEMO_App_Lock"
 		],
 		"methods": [
+			"DEMO_App",
 			"DEMO_ErrMethod",
 			"DEMO_HTML_Analyze",
 			"DEMO_List",
