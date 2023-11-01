@@ -1,5 +1,7 @@
 //%attributes = {}
 
+DEMO_Compiler_Err
+
 ON ERR CALL:C155("DEMO_ErrMethod")
 
 var $1; $FORM : Text

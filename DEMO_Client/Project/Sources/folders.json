@@ -68,6 +68,8 @@
 			"DEMO_Check_Update",
 			"DEMO_Check_Update_HTTP",
 			"DEMO_Client_Download",
+			"DEMO_Client_DownloadWeb",
+			"DEMO_Client_DownloadWeb_Step",
 			"DEMO_Get_4DZ_Path",
 			"DEMO_Version"
 		]
@@ -87,7 +89,8 @@
 		"methods": [
 			"4DC_WIN_FORM",
 			"Col_FindName",
-			"Convert_OldCastToNewCast"
+			"Convert_OldCastToNewCast",
+			"HTTP_Get_Blob"
 		]
 	},
 	"trash": {}

@@ -20,11 +20,10 @@ If ($RESULT.result)
 	$RESULT.update:=($voJSON.numberString#Storage:C1525.version.numberString)
 End if 
 
-If ($RESULT.update)
-	Use (Storage:C1525.version)
-		Storage:C1525.version.update:=True:C214  //アップデートトリガ更新
-		Storage:C1525.version.numberStringNew:=$voJSON.numberString
-	End use 
-End if 
+Use (Storage:C1525.version)
+	Storage:C1525.version.update:=$RESULT.update  //アップデートトリガ
+	Storage:C1525.version.numberStringNew:=$voJSON.numberString
+	Storage:C1525.version.json:=OB Copy:C1225($voJSON; ck shared:K85:29; Storage:C1525.version)
+End use 
 
 $0:=$RESULT

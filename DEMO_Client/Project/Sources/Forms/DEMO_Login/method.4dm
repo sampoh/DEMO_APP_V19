@@ -1,6 +1,7 @@
 
 var $voFORM : Object
 var $msg : Text
+var $process : Integer
 
 Case of 
 	: (Form event code:C388=On Load:K2:1)
@@ -26,7 +27,11 @@ Case of
 		
 		If (FORM Get current page:C276=3)
 			//クライアントダウンロード処理
-			4DC_COM_Add("DEMO_Client_Download")
+			If (Storage:C1525.version.json.onWeb)
+				$process:=New process:C317("DEMO_Client_DownloadWeb"; 0; "DEMO_Client_DownloadWeb"; Current form window:C827)
+			Else 
+				4DC_COM_Add("DEMO_Client_Download")
+			End if 
 		End if 
 		
 	: (Form event code:C388=On Close Box:K2:21)

@@ -79,8 +79,10 @@
 		"methods": [
 			"DEMOS_Client_Download",
 			"DEMOS_NewClient",
+			"DEMOS_NewClient_Block",
 			"DEMOS_NewClient_OnErr",
 			"DEMOS_NewClient_Path",
+			"DEMOS_NewClient_SMB",
 			"DEMOS_NewClient_Sub"
 		]
 	},
