@@ -5,9 +5,7 @@
 //第2引数 ( 必須 ) : プロジェクトフォーム名 【 テキスト型 】
 //第3引数 ( 任意 ) : ウィンドウタイトル 【 テキスト型 】
 //第4引数 ( 任意 ) : ウィンドウタイプ 【 倍長整数型 】 ( 未指定時は "Plain window" 定数 )
-//戻り値 : プロセス番号 【 倍長整数型 】 ( プロセス始動に失敗した場合は -1 )
 
-var $0; $process : Integer
 var $1; $name : Text
 var $2; $FORM : Text
 var $3; $TITLE : Text
@@ -31,11 +29,5 @@ If ($execute)
 	Else 
 		$WIN_TYPE:=Plain window:K34:13
 	End if 
-	//$process:=New process("DEMO_Menu_Win_P"; 0; $name; $FORM; $TITLE; $WIN_TYPE)
-	//↓フォームの有無に依存せず通信できるようワーカー化
 	CALL WORKER:C1389($name; "DEMO_Menu_Win_P"; $FORM; $TITLE; $WIN_TYPE)
-Else 
-	$process:=-1
 End if 
-
-$0:=$process

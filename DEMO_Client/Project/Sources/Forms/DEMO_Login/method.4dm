@@ -13,7 +13,11 @@ Case of
 		
 		If (Storage:C1525.version.update)
 			If (Is compiled mode:C492)
-				FORM GOTO PAGE:C247(2)
+				If (Storage:C1525.version.skip)
+					FORM GOTO PAGE:C247(3)
+				Else 
+					FORM GOTO PAGE:C247(2)
+				End if 
 			Else 
 				//※ インタプリタ時にはバージョンアップを強制しない
 				$msg:="現在のバージョン : "+Storage:C1525.version.numberString+"\r"

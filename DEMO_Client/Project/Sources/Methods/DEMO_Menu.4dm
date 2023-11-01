@@ -75,7 +75,6 @@ Case of
 							$FORM:="DEMO_List"
 							$TITLE:="DEMO Client - List"
 							$process:=DEMO_Menu_Win($ACTION; $FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18)
-							DEMO_Window_Append($ACTION; $process)
 						End if 
 						
 					: ($ACTION="multi_test")  //マルチウインドウ

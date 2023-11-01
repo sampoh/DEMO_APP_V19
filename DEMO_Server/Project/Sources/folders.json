@@ -76,9 +76,16 @@
 		]
 	},
 	"DEMOS_クライアント管理": {
+		"groups": [
+			"DEMOS_クライアント管理Sub"
+		],
+		"methods": [
+			"DEMOS_NewClient"
+		]
+	},
+	"DEMOS_クライアント管理Sub": {
 		"methods": [
 			"DEMOS_Client_Download",
-			"DEMOS_NewClient",
 			"DEMOS_NewClient_Block",
 			"DEMOS_NewClient_OnErr",
 			"DEMOS_NewClient_Path",

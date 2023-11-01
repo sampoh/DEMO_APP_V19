@@ -4,6 +4,8 @@ DEMO_Compiler_Err
 
 ON ERR CALL:C155("DEMO_ErrMethod")
 
+DEMO_Window_Append(Current process name:C1392; Current process:C322)
+
 var $1; $FORM : Text
 var $2; $TITLE : Text
 var $3; $WIN_TYPE : Integer

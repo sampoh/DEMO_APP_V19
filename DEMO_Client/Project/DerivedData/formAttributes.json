@@ -16,6 +16,10 @@
 		"DEMO_Multi": {
 			"timeStamp": "2023-10-17T21:38:11.778Z",
 			"destination": "detailScreen"
+		},
+		"DEMO_Verup": {
+			"timeStamp": "2023-11-01T06:47:58.145Z",
+			"destination": "detailScreen"
 		}
 	}
 }

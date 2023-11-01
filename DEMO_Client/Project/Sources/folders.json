@@ -64,14 +64,28 @@
 		]
 	},
 	"DEMO_バージョン管理": {
+		"groups": [
+			"DEMO_バージョン管理Sub"
+		],
 		"methods": [
+			"DEMO_Version"
+		]
+	},
+	"DEMO_バージョン管理Sub": {
+		"methods": [
+			"DEMO_Cast_Version",
 			"DEMO_Check_Update",
 			"DEMO_Check_Update_HTTP",
 			"DEMO_Client_Download",
 			"DEMO_Client_DownloadWeb",
 			"DEMO_Client_DownloadWeb_Step",
+			"DEMO_Confirm_Verup",
 			"DEMO_Get_4DZ_Path",
-			"DEMO_Version"
+			"DEMO_Worker_Update",
+			"DEMO_Worker_Update_Wait"
+		],
+		"forms": [
+			"DEMO_Verup"
 		]
 	},
 	"DEVELOP": {
@@ -90,7 +104,8 @@
 			"4DC_WIN_FORM",
 			"Col_FindName",
 			"Convert_OldCastToNewCast",
-			"HTTP_Get_Blob"
+			"HTTP_Get_Blob",
+			"wait_min"
 		]
 	},
 	"trash": {}

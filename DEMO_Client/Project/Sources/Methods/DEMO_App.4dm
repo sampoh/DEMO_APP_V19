@@ -10,6 +10,7 @@ var $URL : Text
 var $Connected : Boolean
 var $FORM; $TITLE : Text
 var $RESULT : Object
+var $WORKER_UPDATE : Text
 
 $URL:="http://127.0.0.1:8000"
 
@@ -37,13 +38,21 @@ If ($Connected)
 		Else 
 			
 			If (Storage:C1525.system.loggedIn)
-				//"DEMO_List" フォームを元にウィンドウ生成
-				//$FORM:="DEMO_List"
-				//$TITLE:="DEMO Client - List"
-				//↓メニューに変更
+				
+				//定期アップデートチェックを始動
+				$WORKER_UPDATE:="WORKER_UPDATE"  //ワーカー名
+				CALL WORKER:C1389($WORKER_UPDATE; "DEMO_Worker_Update")
+				
+				//メニュー表示
 				$FORM:="DEMO_Menu"
 				$TITLE:="MAIN MENU"
 				4DC_WIN_FORM($FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18; False:C215; False:C215; On the left:K39:2; At the top:K39:5)
+				
+				//定期アップデートチェックを停止
+				Use (Storage:C1525.version)
+					Storage:C1525.version.worker:=False:C215
+				End use 
+				
 			End if 
 			
 		End if 

@@ -1,7 +1,7 @@
 //%attributes = {}
 
 //バージョン情報
-DEMO_Version
+DEMO_Cast_Version
 
 //エラーハンドリング用
 DEMO_Compiler_Err
