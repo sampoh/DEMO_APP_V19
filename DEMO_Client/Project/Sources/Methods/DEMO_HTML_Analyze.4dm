@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 var $execute : Boolean
 var $LISTBOX; $URL; $html; $TEMP; $attr; $value; $TITLE : Text
@@ -16,8 +16,7 @@ $LISTBOX:="LB_META"
 $colTemp:=New collection:C1472
 $colMeta:=New collection:C1472
 
-//オブジェクト名を指定して取得
-4DC_ObjectValue("detail_url"; ->$URL)
+$URL:=voSite.url
 
 $execute:=($URL="http@")
 
@@ -31,7 +30,7 @@ If ($execute)
 			$TITLE:=Substring:C12($html; $alPosFound{1}; $alLenFound{1})
 		End if 
 		4DC_WEB_Unescape($TITLE; ->$TITLE)
-		4DC_ObjectValue("detail_title"; ->$TITLE; "set")
+		voSite.title:=$TITLE
 		
 		//head以外削除
 		If (Match regex:C1019("<head>((.|\\r|\\n)*?)</head>"; Lowercase:C14($html); 1; $posFound; $lenFound))
@@ -75,12 +74,12 @@ If ($execute)
 		End while 
 		
 		If ($FLG_Description)
-			4DC_ObjectValue("detail_description"; ->$content; "set")
+			voSite.description:=$meta_title
 		End if 
 		
 		If ($TITLE="")
 			If ($FLG_Title)
-				4DC_ObjectValue("detail_title"; ->$meta_title; "set")
+				voSite.title:=$meta_title
 			End if 
 		End if 
 		
