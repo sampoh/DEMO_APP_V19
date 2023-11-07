@@ -10,11 +10,14 @@ ON ERR CALL:C155("DEMOS_NewClient_OnErr")
 var $1; $version : Object
 
 var $ACCEPT : Boolean
-var $ref; $filename : Text
+var $ref; $filename; $CRLF : Text
 var $PATH_JSON : Text
+var $PATH_ROBOTS; $ROBOTS : Text
 var $PATH_FROM; $PATH_TO : Text
 
 $version:=$1
+
+$CRLF:=Char:C90(Carriage return:K15:38)+Char:C90(Line feed:K15:40)
 
 $ref:=Select document:C905(""; "4dz"; "4DZファイルを選択してください。"; 0)
 
@@ -56,8 +59,13 @@ If ($ACCEPT)
 	//バージョンチェック用JSONはWEBフォルダへ
 	$PATH_JSON:=Get 4D folder:C485(HTML Root folder:K5:20)
 	$PATH_JSON:=$PATH_JSON+"client_binary"+Folder separator:K24:12+"info.json"
-	
 	TEXT TO DOCUMENT:C1237($PATH_JSON; JSON Stringify:C1217($version); "UTF-8")
+	
+	//"robots.txt" を設置しクローリングを回避
+	$ROBOTS:="User-agent: *"+$CRLF+"Disallow: /"+$CRLF
+	$PATH_ROBOTS:=Get 4D folder:C485(HTML Root folder:K5:20)
+	$PATH_ROBOTS:=$PATH_ROBOTS+"client_binary"+Folder separator:K24:12+"robots.txt"
+	TEXT TO DOCUMENT:C1237($PATH_ROBOTS; $ROBOTS; "UTF-8")
 	
 	ALERT:C41("クライアントを更新しました。")
 	
