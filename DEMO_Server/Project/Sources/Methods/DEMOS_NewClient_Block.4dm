@@ -14,6 +14,10 @@ var $DIR_BIN; $PATH_BIN; $filename : Text
 $ACCEPT:=False:C215
 $DIR_BIN:=Get 4D folder:C485(HTML Root folder:K5:20)+"client_binary"+Folder separator:K24:12
 
+If (Test path name:C476($DIR_BIN)#Is a folder:K24:2)
+	CREATE FOLDER:C475($DIR_BIN)
+End if 
+
 $PATH_IN:=$1
 $version:=OB Copy:C1225($2->)
 
