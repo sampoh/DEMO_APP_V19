@@ -20,7 +20,7 @@ $sizeI:=Size of array:C274($atFiles)
 For ($i; 1; $sizeI)
 	$FROM:=$DIR_4D+$atFiles{$i}
 	$TO:=$DIR_SMB+$atFiles{$i}
-	COPY DOCUMENT:C541($FROM; $TO:*)
+	COPY DOCUMENT:C541($FROM; $TO; *)
 End for 
 
 ALERT:C41("リバースプロキシ上にもファイルを設置しました。")
