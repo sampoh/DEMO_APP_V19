@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 //↓必須パラメータ
 var $0; $voOUT : Object
@@ -8,6 +8,7 @@ var $3; $TIPS : Object
 //↑必須パラメータ
 
 var $ID : Integer
+var $OPEN : Boolean
 
 $action:=$1
 
@@ -47,10 +48,22 @@ Case of
 	: ($action="done")
 		//< 正常時のみ実行 >
 		
-		voSite:=$voIN.sites
-		colMeta:=$voIN.meta.copy()  //※ コレクションはポインタ経由で更新するとビルド時に型変換エラーになるので注意
+		OBJECT SET ENABLED:C1123(*; "BTN_SAVE"; Not:C34($voIN.lock.isLocked))
 		
-		FORM GOTO PAGE:C247(2)
+		If ($voIN.lock.isLocked)
+			$OPEN:=4DC_Confirm("ユーザ \""+$voIN.lock.user.account+"\" によって編集中です。\r\n読み取り専用で開きますか？")
+		Else 
+			$OPEN:=True:C214
+		End if 
+		
+		If ($OPEN)
+			
+			voSite:=$voIN.sites
+			colMeta:=$voIN.meta.copy()  //※ コレクションはポインタ経由で更新するとビルド時に型変換エラーになるので注意
+			
+			FORM GOTO PAGE:C247(2)
+			
+		End if 
 		
 	: ($action="fail")
 		//< エラー時のみ実行 >
