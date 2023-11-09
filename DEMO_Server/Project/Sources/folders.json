@@ -18,9 +18,11 @@
 		"methods": [
 			"DEMOS_Common_EmptyObj",
 			"DEMOS_List",
+			"DEMOS_Load_SiteType",
 			"DEMOS_Login",
 			"DEMOS_Logout",
 			"DEMOS_Save_Detail",
+			"DEMOS_Save_SiteType",
 			"DEMOS_Show_Detail",
 			"DEMOS_Update_Session"
 		]
@@ -51,6 +53,7 @@
 			"errorClient",
 			"lock",
 			"meta",
+			"pullDown",
 			"session",
 			"sites",
 			"user"
@@ -67,6 +70,8 @@
 			"[lock]OUTPUT",
 			"[meta]INPUT",
 			"[meta]OUTPUT",
+			"[pullDown]INPUT",
+			"[pullDown]OUTPUT",
 			"[session]INPUT",
 			"[session]OUTPUT",
 			"[sites]INPUT",

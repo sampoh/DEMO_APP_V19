@@ -68,12 +68,23 @@ Case of
 				Case of 
 					: ($ACTION="analyze_sites")  //シングルウインドウ
 						
-						//"DEMO_Window_Detect" および "DEMO_Window_Append" は1つしか開かせない制御。
+						//"DEMO_Window_Detect" は1つしか開かせない制御。
 						If (DEMO_Window_Detect($ACTION; ->$process))
 							BRING TO FRONT:C326($process)
 						Else 
 							$FORM:="DEMO_List"
 							$TITLE:="DEMO Client - List"
+							DEMO_Menu_Win($ACTION; $FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18)
+						End if 
+						
+					: ($ACTION="admin_master")  //シングルウインドウ
+						
+						//"DEMO_Window_Detect" は1つしか開かせない制御。
+						If (DEMO_Window_Detect($ACTION; ->$process))
+							BRING TO FRONT:C326($process)
+						Else 
+							$FORM:="DEMO_Master"
+							$TITLE:="DEMO Client - Master"
 							DEMO_Menu_Win($ACTION; $FORM; $TITLE; Plain window:K34:13+Form has no menu bar:K39:18)
 						End if 
 						

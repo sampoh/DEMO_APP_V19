@@ -1,0 +1,188 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 640,
+					"height": 480,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"BTN_CLOSE1": {
+					"type": "button",
+					"top": 18,
+					"left": 512,
+					"width": 110,
+					"height": 31,
+					"sizingX": "move",
+					"text": "CLOSE",
+					"focusable": false,
+					"method": "ObjectMethods/BTN_CLOSE1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"LB_SITE_TYPE": {
+					"type": "listbox",
+					"left": 161,
+					"top": 95,
+					"width": 300,
+					"height": 309,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"selectionMode": "single",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.siteType",
+					"dragging": "none",
+					"dropping": "none",
+					"columns": [
+						{
+							"header": {
+								"text": "Site type",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.value",
+							"width": 283,
+							"enterable": false
+						}
+					]
+				},
+				"BTN_ADD": {
+					"type": "button",
+					"text": "ADD",
+					"top": 95,
+					"left": 473,
+					"width": 106,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"method": "ObjectMethods/BTN_ADD.4dm"
+				},
+				"BTN_REMOVE": {
+					"type": "button",
+					"text": "REMOVE",
+					"top": 137,
+					"left": 473,
+					"width": 106,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"method": "ObjectMethods/BTN_REMOVE.4dm"
+				},
+				"BTN_MOVE_UP": {
+					"type": "button",
+					"text": "▲",
+					"top": 95,
+					"left": 43,
+					"width": 106,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"method": "ObjectMethods/BTN_MOVE_UP.4dm"
+				},
+				"BTN_MOVE_DOWN": {
+					"type": "button",
+					"text": "▼",
+					"top": 137,
+					"left": 43,
+					"width": 106,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"method": "ObjectMethods/BTN_MOVE_DOWN.4dm"
+				},
+				"progress_bg_001": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 640,
+					"height": 480,
+					"visibility": "hidden",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/library/gray.png"
+				},
+				"Thermometer_1": {
+					"type": "spinner",
+					"top": 224,
+					"left": 304,
+					"width": 32,
+					"height": 32,
+					"visibility": "hidden",
+					"dataSource": "Thermometer",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 169,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

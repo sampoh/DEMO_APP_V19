@@ -35,16 +35,16 @@
 			"timeStamp": "2023-10-14T16:03:01.995Z"
 		},
 		"DEMO_Client_Download": {
-			"timeStamp": "2023-10-14T16:03:01.996Z"
+			"timeStamp": "2023-11-09T08:54:50.824Z"
 		},
 		"DEMO_Client_DownloadWeb": {
 			"timeStamp": "2023-11-01T04:38:17.498Z"
 		},
 		"DEMO_Client_DownloadWeb_Step": {
-			"timeStamp": "2023-11-01T04:38:07.119Z"
+			"timeStamp": "2023-11-09T08:54:37.274Z"
 		},
 		"DEMO_Compiler": {
-			"timeStamp": "2023-11-09T08:43:37.588Z"
+			"timeStamp": "2023-11-09T08:55:38.352Z"
 		},
 		"DEMO_Compiler_Err": {
 			"timeStamp": "2023-10-14T16:03:01.999Z"
@@ -69,6 +69,9 @@
 				"shared": true
 			}
 		},
+		"DEMO_Load_SiteType": {
+			"timeStamp": "2023-11-09T09:46:26.080Z"
+		},
 		"DEMO_Login": {
 			"timeStamp": "2023-11-09T08:43:21.714Z"
 		},
@@ -78,11 +81,14 @@
 				"shared": true
 			}
 		},
+		"DEMO_Master_Move": {
+			"timeStamp": "2023-11-09T10:37:42.021Z"
+		},
 		"DEMO_Menu": {
-			"timeStamp": "2023-11-06T07:57:02.109Z"
+			"timeStamp": "2023-11-09T09:52:17.246Z"
 		},
 		"DEMO_Menu_Cast": {
-			"timeStamp": "2023-10-17T16:05:51.118Z"
+			"timeStamp": "2023-11-09T09:50:51.284Z"
 		},
 		"DEMO_Menu_Win": {
 			"timeStamp": "2023-11-01T06:21:14.180Z"
@@ -102,8 +108,11 @@
 		"DEMO_Save_Detail": {
 			"timeStamp": "2023-11-09T08:27:47.737Z"
 		},
+		"DEMO_Save_SiteType": {
+			"timeStamp": "2023-11-09T11:00:24.532Z"
+		},
 		"DEMO_Show_Detail": {
-			"timeStamp": "2023-11-09T08:34:23.262Z"
+			"timeStamp": "2023-11-09T09:32:05.362Z"
 		},
 		"DEMO_Start": {
 			"timeStamp": "2023-11-09T08:45:48.034Z"

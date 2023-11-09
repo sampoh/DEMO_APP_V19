@@ -10,6 +10,7 @@ var $3; $TIPS : Object
 var $ID : Integer
 var $OPEN : Boolean
 var $ONE : Object
+var $siteType : Text
 
 $action:=$1
 
@@ -48,6 +49,10 @@ Case of
 		
 	: ($action="done")
 		//< 正常時のみ実行 >
+		
+		If ($voIN.sites.type="")
+			$voIN.sites.type:="unknown"
+		End if 
 		
 		//"Type" プルダウン
 		Form:C1466.pulldown:=New object:C1471

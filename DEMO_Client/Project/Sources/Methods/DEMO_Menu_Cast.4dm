@@ -8,6 +8,7 @@ $OBJ.group:=New collection:C1472
 $OBJ.group.push(New object:C1471("title"; "機能 1"; "name"; "group_001"; \
 "list"; New collection:C1472(\
 New object:C1471("title"; "サイト解析"; "action"; "analyze_sites"); \
+New object:C1471("title"; "マスタ管理"; "action"; "admin_master"); \
 New object:C1471("title"; "マルチウインドウテスト"; "action"; "multi_test"))))
 
 $OBJ.group.push(New object:C1471("title"; "機能 2"; "name"; "group_002"; \

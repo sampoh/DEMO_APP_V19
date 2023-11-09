@@ -21,8 +21,10 @@
 			"DEMO_ErrMethod",
 			"DEMO_HTML_Analyze",
 			"DEMO_List",
+			"DEMO_Load_SiteType",
 			"DEMO_Login",
 			"DEMO_Logout",
+			"DEMO_Master_Move",
 			"DEMO_Menu",
 			"DEMO_Menu_Cast",
 			"DEMO_Menu_Win",
@@ -31,12 +33,14 @@
 			"DEMO_Menu_Win_Multi_P",
 			"DEMO_Menu_Win_P",
 			"DEMO_Save_Detail",
+			"DEMO_Save_SiteType",
 			"DEMO_Show_Detail",
 			"DEMO_Toggle_Progress"
 		],
 		"forms": [
 			"DEMO_List",
 			"DEMO_Login",
+			"DEMO_Master",
 			"DEMO_Menu",
 			"DEMO_Multi"
 		]
