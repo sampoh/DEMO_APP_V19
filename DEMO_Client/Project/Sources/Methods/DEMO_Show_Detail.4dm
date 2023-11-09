@@ -54,8 +54,10 @@ Case of
 			$voIN.sites.type:="unknown"
 		End if 
 		
-		//"Type" プルダウン
+		//プルダウン親要素
 		Form:C1466.pulldown:=New object:C1471
+		
+		//"siteType" プルダウン
 		Form:C1466.pulldown.siteType:=New object:C1471
 		Form:C1466.pulldown.siteType.values:=New collection:C1472
 		For each ($ONE; $voIN.pullDown.site_type)

@@ -68,9 +68,34 @@
 					"fontFamily": "Meiryo",
 					"fontSize": 24,
 					"textAlign": "center"
+				},
+				"Input": {
+					"type": "input",
+					"left": 182,
+					"top": 115,
+					"width": 109,
+					"height": 16,
+					"dataSource": "Form:C1466.multi.date",
+					"method": "ObjectMethods/Input.4dm",
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"textAlign": "center",
+					"dataSourceTypeHint": "text",
+					"events": [
+						"onClick",
+						"onGettingFocus"
+					]
 				}
 			}
 		}
 	],
-	"geometryStamp": 64
+	"geometryStamp": 66,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
 }

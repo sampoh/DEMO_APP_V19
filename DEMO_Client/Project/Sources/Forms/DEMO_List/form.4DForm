@@ -373,6 +373,27 @@
 						"onClick"
 					]
 				},
+				"Text3": {
+					"type": "text",
+					"top": 83,
+					"left": 466,
+					"width": 36,
+					"height": 13,
+					"text": "TYPE"
+				},
+				"siteType": {
+					"type": "dropdown",
+					"left": 503,
+					"top": 79,
+					"width": 119,
+					"height": 22,
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "object",
+					"dataSource": "Form:C1466.pulldown.siteType",
+					"method": "ObjectMethods/siteType.4dm"
+				},
 				"progress_bg_002": {
 					"type": "picture",
 					"top": 0,
@@ -397,32 +418,11 @@
 						"onClick",
 						"onDataChange"
 					]
-				},
-				"Text3": {
-					"type": "text",
-					"top": 83,
-					"left": 466,
-					"width": 36,
-					"height": 13,
-					"text": "TYPE"
-				},
-				"siteType": {
-					"type": "dropdown",
-					"left": 503,
-					"top": 79,
-					"width": 119,
-					"height": 22,
-					"events": [
-						"onDataChange"
-					],
-					"dataSourceTypeHint": "object",
-					"dataSource": "Form:C1466.pulldown.siteType",
-					"method": "ObjectMethods/siteType.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 485,
+	"geometryStamp": 491,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
