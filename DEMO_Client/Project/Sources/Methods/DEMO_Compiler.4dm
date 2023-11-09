@@ -11,6 +11,3 @@ DEMO_Menu_Cast
 
 //ウインドウ管理
 DEMO_Window_Cast
-
-//アップデート処理用
-var voUpdate : Object

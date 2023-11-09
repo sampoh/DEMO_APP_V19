@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 //↓必須パラメータ
 var $0; $voOUT : Object
@@ -44,11 +44,11 @@ Case of
 		//< ファイルダウンロード処理進捗状況 >
 		
 		If ($voIN.percentile=Null:C1517)
-			voUpdate.progress:=0
-			voUpdate.text:="0%"
+			Form:C1466.update.progress:=0
+			Form:C1466.update.text:="0%"
 		Else 
-			voUpdate.progress:=$voIN.percentile
-			voUpdate.text:=String:C10(voUpdate.progress)+"%"
+			Form:C1466.update.progress:=$voIN.percentile
+			Form:C1466.update.text:=String:C10(Form:C1466.update.progress)+"%"
 		End if 
 		
 	: ($action="get")

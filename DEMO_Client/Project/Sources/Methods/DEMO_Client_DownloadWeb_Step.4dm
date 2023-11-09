@@ -19,8 +19,8 @@ Case of
 		
 	: ($STEP="progress")
 		
-		voUpdate.progress:=$IN.progress
-		voUpdate.text:=String:C10($IN.progress)+"%"
+		Form:C1466.update.progress:=$IN.progress
+		Form:C1466.update.text:=String:C10($IN.progress)+"%"
 		
 	: ($STEP="complete")
 		

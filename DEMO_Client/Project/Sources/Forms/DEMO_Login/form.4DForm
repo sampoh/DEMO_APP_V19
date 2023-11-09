@@ -208,7 +208,7 @@
 					"width": 360,
 					"height": 15,
 					"max": 100,
-					"dataSource": "voUpdate.progress"
+					"dataSource": "Form:C1466.update.progress"
 				},
 				"Input1": {
 					"type": "input",
@@ -217,7 +217,7 @@
 					"width": 200,
 					"height": 29,
 					"enterable": false,
-					"dataSource": "voUpdate.text",
+					"dataSource": "Form:C1466.update.text",
 					"fontFamily": "Meiryo",
 					"fontSize": 14,
 					"textAlign": "center",
