@@ -8,6 +8,7 @@ var $sitesEntity; $metaEntitySel : Object
 var $voSites : Object
 var $colMeta : Collection
 var $lockUser : Object
+var $pullDownSel : Object
 
 $lockUser:=New object:C1471
 
@@ -28,6 +29,12 @@ Else
 	$voOUT[Table name:C256(->[sites:5])]:=DEMOS_Common_EmptyObj(->[sites:5])
 End if 
 $voOUT[Table name:C256(->[meta:6])]:=$metaEntitySel.toCollection()
+
+//"[pullDown]" テーブルを全件取得
+$pullDownSel:=ds:C1482.pullDown.query("target = :1"; "site_type").orderBy("order asc")
+
+$voOUT.pullDown:=New object:C1471
+$voOUT.pullDown.site_type:=$pullDownSel.toCollection()
 
 //他ユーザによるレコードロック情報返却
 $voOUT.lock:=New object:C1471

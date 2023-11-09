@@ -17,6 +17,9 @@ Case of
 		//最大化
 		//MAXIMIZE WINDOW(Current form window)
 		
+		//クリア
+		//Form.siteList:=New collection
+		
 		//一覧ロードのための通信処理
 		4DC_COM_Add("DEMO_List")
 		

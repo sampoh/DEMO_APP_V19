@@ -118,7 +118,7 @@
 						"onHeaderClick"
 					],
 					"listboxType": "collection",
-					"dataSource": "colSites",
+					"dataSource": "Form:C1466.siteList",
 					"sizingX": "grow",
 					"sizingY": "grow",
 					"selectionMode": "single",
@@ -200,8 +200,8 @@
 				"detail_title": {
 					"type": "input",
 					"top": 82,
-					"left": 131,
-					"width": 479,
+					"left": 111,
+					"width": 319,
 					"height": 16,
 					"sizingX": "grow",
 					"dragging": "none",
@@ -209,13 +209,13 @@
 					"events": [
 						"onDataChange"
 					],
-					"dataSource": "voSite.title"
+					"dataSource": "Form:C1466.detail.title"
 				},
 				"detail_url": {
 					"type": "input",
 					"top": 122,
-					"left": 131,
-					"width": 411,
+					"left": 111,
+					"width": 431,
 					"height": 16,
 					"sizingX": "grow",
 					"dragging": "none",
@@ -223,7 +223,7 @@
 					"events": [
 						"onDataChange"
 					],
-					"dataSource": "voSite.url"
+					"dataSource": "Form:C1466.detail.url"
 				},
 				"LB_META": {
 					"type": "listbox",
@@ -242,7 +242,7 @@
 						"onHeaderClick"
 					],
 					"listboxType": "collection",
-					"dataSource": "colMeta",
+					"dataSource": "Form:C1466.meta",
 					"columns": [
 						{
 							"name": "meta_group",
@@ -310,8 +310,8 @@
 				"detail_description": {
 					"type": "input",
 					"top": 162,
-					"left": 131,
-					"width": 479,
+					"left": 111,
+					"width": 499,
 					"height": 16,
 					"sizingX": "grow",
 					"dragging": "none",
@@ -319,13 +319,13 @@
 					"events": [
 						"onDataChange"
 					],
-					"dataSource": "voSite.description"
+					"dataSource": "Form:C1466.detail.description"
 				},
 				"Text": {
 					"type": "text",
 					"top": 83,
 					"left": 26,
-					"width": 96,
+					"width": 76,
 					"height": 13,
 					"text": "TITLE"
 				},
@@ -333,7 +333,7 @@
 					"type": "text",
 					"top": 123,
 					"left": 26,
-					"width": 96,
+					"width": 76,
 					"height": 13,
 					"text": "URL"
 				},
@@ -341,7 +341,7 @@
 					"type": "text",
 					"top": 163,
 					"left": 26,
-					"width": 96,
+					"width": 76,
 					"height": 13,
 					"text": "DESCRIPTION"
 				},
@@ -397,11 +397,32 @@
 						"onClick",
 						"onDataChange"
 					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 83,
+					"left": 466,
+					"width": 36,
+					"height": 13,
+					"text": "TYPE"
+				},
+				"siteType": {
+					"type": "dropdown",
+					"left": 503,
+					"top": 79,
+					"width": 119,
+					"height": 22,
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "object",
+					"dataSource": "Form:C1466.pulldown.siteType",
+					"method": "ObjectMethods/siteType.4dm"
 				}
 			}
 		}
 	],
-	"geometryStamp": 274,
+	"geometryStamp": 465,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 var $0; $voOUT : Object
 var $1; $voIN : Object
@@ -66,6 +66,7 @@ If (vlErrCode=0)
 		$siteEntity.title:=$voIN.site.title
 		$siteEntity.url:=$voIN.site.url
 		$siteEntity.description:=$voIN.site.description
+		$siteEntity.type:=$voIN.site.type
 		$statusSave:=$siteEntity.save()
 		$ID_SAVED:=$siteEntity.ID
 		If (Not:C34($isNew))

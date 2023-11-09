@@ -194,7 +194,7 @@
 				},
 				"objTableName": {
 					"borderStyle": "none",
-					"dataSource": "Table name:C256(->[sites:5])",
+					"dataSource": "Table name:C256(->[pullDown:8])",
 					"enterable": false,
 					"height": 16,
 					"left": 103,
@@ -220,7 +220,7 @@
 				"ID": {
 					"borderStyle": "sunken",
 					"contextMenu": "none",
-					"dataSource": "[sites:5]ID:1",
+					"dataSource": "[pullDown:8]ID:1",
 					"dataSourceTypeHint": "integer",
 					"dragging": "none",
 					"dropping": "none",
@@ -252,10 +252,78 @@
 					"type": "text",
 					"width": 71
 				},
-				"ID_user": {
+				"target": {
 					"borderStyle": "sunken",
 					"contextMenu": "none",
-					"dataSource": "[sites:5]ID_user:2",
+					"dataSource": "[pullDown:8]target:2",
+					"dragging": "none",
+					"dropping": "none",
+					"enterable": true,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"focusable": false,
+					"height": 16,
+					"left": 191,
+					"top": 70,
+					"type": "input",
+					"width": 320
+				},
+				"テキスト_1": {
+					"height": 15,
+					"left": 115,
+					"text": "target : ",
+					"top": 70,
+					"type": "text",
+					"width": 71
+				},
+				"value": {
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dataSource": "[pullDown:8]value:3",
+					"dragging": "none",
+					"dropping": "none",
+					"enterable": true,
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					],
+					"fill": "#FFFFFF",
+					"focusable": false,
+					"height": 16,
+					"left": 191,
+					"top": 95,
+					"type": "input",
+					"width": 320
+				},
+				"テキスト_2": {
+					"height": 15,
+					"left": 115,
+					"text": "value : ",
+					"top": 95,
+					"type": "text",
+					"width": 71
+				},
+				"code": {
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dataSource": "[pullDown:8]code:4",
 					"dataSourceTypeHint": "integer",
 					"dragging": "none",
 					"dropping": "none",
@@ -275,126 +343,23 @@
 					"focusable": false,
 					"height": 16,
 					"left": 191,
-					"top": 70,
+					"top": 120,
 					"type": "input",
 					"width": 71
-				},
-				"テキスト_1": {
-					"height": 15,
-					"left": 115,
-					"text": "ID_user : ",
-					"top": 70,
-					"type": "text",
-					"width": 71
-				},
-				"url": {
-					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dataSource": "[sites:5]url:3",
-					"dragging": "none",
-					"dropping": "none",
-					"enterable": true,
-					"events": [
-						"onLoad",
-						"onValidate",
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					],
-					"fill": "#FFFFFF",
-					"scrollbarVertical": "visible",
-					"focusable": false,
-					"height": 64,
-					"left": 191,
-					"top": 95,
-					"type": "input",
-					"width": 320
-				},
-				"テキスト_2": {
-					"height": 15,
-					"left": 115,
-					"text": "url : ",
-					"top": 95,
-					"type": "text",
-					"width": 71
-				},
-				"title": {
-					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dataSource": "[sites:5]title:4",
-					"dragging": "none",
-					"dropping": "none",
-					"enterable": true,
-					"events": [
-						"onLoad",
-						"onValidate",
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					],
-					"fill": "#FFFFFF",
-					"focusable": false,
-					"height": 16,
-					"left": 191,
-					"top": 168,
-					"type": "input",
-					"width": 320
 				},
 				"テキスト_3": {
 					"height": 15,
 					"left": 115,
-					"text": "title : ",
-					"top": 168,
+					"text": "code : ",
+					"top": 120,
 					"type": "text",
 					"width": 71
 				},
-				"description": {
+				"order": {
 					"borderStyle": "sunken",
 					"contextMenu": "none",
-					"dataSource": "[sites:5]description:5",
-					"dragging": "none",
-					"dropping": "none",
-					"enterable": true,
-					"events": [
-						"onLoad",
-						"onValidate",
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					],
-					"fill": "#FFFFFF",
-					"scrollbarVertical": "visible",
-					"focusable": false,
-					"height": 64,
-					"left": 191,
-					"top": 193,
-					"type": "input",
-					"width": 320
-				},
-				"テキスト_4": {
-					"height": 15,
-					"left": 115,
-					"text": "description : ",
-					"top": 193,
-					"type": "text",
-					"width": 71
-				},
-				"type": {
-					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dataSource": "[sites:5]type:6",
+					"dataSource": "[pullDown:8]order:5",
+					"dataSourceTypeHint": "integer",
 					"dragging": "none",
 					"dropping": "none",
 					"enterable": true,
@@ -413,15 +378,15 @@
 					"focusable": false,
 					"height": 16,
 					"left": 191,
-					"top": 266,
+					"top": 145,
 					"type": "input",
-					"width": 320
+					"width": 71
 				},
-				"テキスト_5": {
+				"テキスト_4": {
 					"height": 15,
 					"left": 115,
-					"text": "type : ",
-					"top": 266,
+					"text": "order : ",
+					"top": 145,
 					"type": "text",
 					"width": 71
 				}

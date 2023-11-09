@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 //↓必須パラメータ
 var $0; $voOUT : Object
@@ -41,7 +41,7 @@ Case of
 		$voOUT.method:="DEMOS_Login"
 		
 		//フォーム上の値を送信
-		$voOUT.form:=voLogin
+		$voOUT.form:=OB Copy:C1225(Form:C1466.login)
 		
 	: ($action="progress")
 		

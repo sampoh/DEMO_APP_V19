@@ -9,6 +9,7 @@ var $3; $TIPS : Object
 
 var $ID : Integer
 var $OPEN : Boolean
+var $ONE : Object
 
 $action:=$1
 
@@ -48,6 +49,16 @@ Case of
 	: ($action="done")
 		//< 正常時のみ実行 >
 		
+		//"Type" プルダウン
+		Form:C1466.pulldown:=New object:C1471
+		Form:C1466.pulldown.siteType:=New object:C1471
+		Form:C1466.pulldown.siteType.values:=New collection:C1472
+		For each ($ONE; $voIN.pullDown.site_type)
+			Form:C1466.pulldown.siteType.values.push($ONE.value)
+		End for each 
+		Form:C1466.pulldown.siteType.index:=Form:C1466.pulldown.siteType.values.indexOf($voIN.sites.type)
+		Form:C1466.pulldown.siteType.currentValue:=$voIN.sites.type
+		
 		OBJECT SET ENABLED:C1123(*; "BTN_SAVE"; Not:C34($voIN.lock.isLocked))
 		
 		If ($voIN.lock.isLocked)
@@ -58,8 +69,8 @@ Case of
 		
 		If ($OPEN)
 			
-			voSite:=$voIN.sites
-			colMeta:=$voIN.meta.copy()  //※ コレクションはポインタ経由で更新するとビルド時に型変換エラーになるので注意
+			Form:C1466.detail:=OB Copy:C1225($voIN.sites)
+			Form:C1466.meta:=$voIN.meta.copy()  //※ コレクションはポインタ経由で更新するとビルド時に型変換エラーになるので注意
 			
 			FORM GOTO PAGE:C247(2)
 			

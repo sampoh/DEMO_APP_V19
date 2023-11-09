@@ -16,7 +16,7 @@ $LISTBOX:="LB_META"
 $colTemp:=New collection:C1472
 $colMeta:=New collection:C1472
 
-$URL:=voSite.url
+$URL:=Form:C1466.detail.url
 
 $execute:=($URL="http@")
 
@@ -30,7 +30,7 @@ If ($execute)
 			$TITLE:=Substring:C12($html; $alPosFound{1}; $alLenFound{1})
 		End if 
 		4DC_WEB_Unescape($TITLE; ->$TITLE)
-		voSite.title:=$TITLE
+		Form:C1466.detail.title:=$TITLE
 		
 		//head以外削除
 		If (Match regex:C1019("<head>((.|\\r|\\n)*?)</head>"; Lowercase:C14($html); 1; $posFound; $lenFound))
@@ -74,12 +74,12 @@ If ($execute)
 		End while 
 		
 		If ($FLG_Description)
-			voSite.description:=$meta_title
+			Form:C1466.detail.description:=$meta_title
 		End if 
 		
 		If ($TITLE="")
 			If ($FLG_Title)
-				voSite.title:=$meta_title
+				Form:C1466.detail.title:=$meta_title
 			End if 
 		End if 
 		

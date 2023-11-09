@@ -7,9 +7,9 @@ Case of
 	: (Form event code:C388=On Load:K2:1)
 		
 		//初期値をフォームに設定
-		voLogin:=New object:C1471
-		voLogin.account:="takahara"
-		voLogin.password:="1234"
+		Form:C1466.login:=New object:C1471
+		Form:C1466.login.account:="takahara"
+		Form:C1466.login.password:="1234"
 		
 		If (Storage:C1525.version.update)
 			If (Is compiled mode:C492)

@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 //テーブルフォームを自動生成
 
 var $i; $sizeI : Integer

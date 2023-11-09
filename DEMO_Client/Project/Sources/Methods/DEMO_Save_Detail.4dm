@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 
 //↓必須パラメータ
 var $0; $voOUT : Object
@@ -34,13 +34,13 @@ Case of
 		$voOUT.method:="DEMOS_Save_Detail"
 		
 		//入力フォームの値を取得
-		$voOUT.site:=OB Copy:C1225(voSite)
+		$voOUT.site:=OB Copy:C1225(Form:C1466.detail)
 		
 		//"$ID" を取得
 		4DC_KEEP_Get("[sites]ID"; ->$ID)
 		$voOUT.site.ID:=$ID
 		
-		$voOUT.meta:=colMeta.copy()
+		$voOUT.meta:=Form:C1466.meta.copy()
 		//※ コレクションはポインタ経由で更新するとビルド時に型変換エラーになるが
 		//　　読み込みは問題ない。ただし可読性向上のためここではプロセス変数経由
 		

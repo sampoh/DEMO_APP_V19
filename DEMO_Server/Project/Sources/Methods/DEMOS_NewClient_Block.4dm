@@ -9,7 +9,7 @@ var $version : Object
 var $docRef; $tempRef : Time
 var $ReceiveBLOB : Blob
 var $COUNTER : Integer
-var $DIR_BIN; $PATH_BIN; $filename : Text
+var $DIR_BIN; $filename : Text
 
 $ACCEPT:=False:C215
 $DIR_BIN:=Get 4D folder:C485(HTML Root folder:K5:20)+"client_binary"+Folder separator:K24:12
@@ -41,8 +41,7 @@ If (OK=1)
 			$COUNTER:=$COUNTER+1
 			$filename:="file_"+String:C10($COUNTER; "000")+".dat"
 			$version.files.push($filename)
-			$PATH_BIN:=$DIR_BIN+$filename
-			$tempRef:=Create document:C266($PATH_BIN)
+			$tempRef:=Create document:C266($DIR_BIN+$filename)
 			SEND PACKET:C103($tempRef; $ReceiveBLOB)
 			CLOSE DOCUMENT:C267($tempRef)
 		End if 

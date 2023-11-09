@@ -41,7 +41,7 @@ Case of
 	: ($action="done")
 		//< 正常時のみ実行 >
 		
-		colSites:=$voIN.sites.copy()
+		Form:C1466.siteList:=$voIN.sites.copy()
 		//※ コレクションはポインタ経由で更新するとビルド時に型変換エラーになるので注意
 		
 		FORM GOTO PAGE:C247(1)

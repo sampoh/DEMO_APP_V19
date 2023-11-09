@@ -1,8 +1,7 @@
-﻿
+
 var $PTR : Pointer
 var $LISTBOX : Text
 var $col; $row; $pos : Integer
-var $colSites : Collection
 var $voSite : Object
 var $ID : Integer
 
@@ -13,10 +12,10 @@ Case of
 		LISTBOX GET CELL POSITION:C971(*; $LISTBOX; $col; $row)
 		
 		If ($row>0)
+			
 			$pos:=$row-1
-			$PTR:=OBJECT Get pointer:C1124(Object current:K67:2)
-			$colSites:=$PTR->copy()
-			$voSite:=$colSites[$pos]
+			
+			$voSite:=Form:C1466.siteList[$pos]
 			$ID:=$voSite.ID
 			
 			//"$ID" を一時保管
