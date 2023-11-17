@@ -1,0 +1,296 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 1280,
+	"windowMinHeight": 600,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1280,
+					"height": 600,
+					"stroke": "transparent",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"fill": "#b1c4dd",
+					"right": 1280
+				}
+			}
+		},
+		{
+			"objects": {
+				"Subform": {
+					"type": "subform",
+					"left": 272,
+					"top": 10,
+					"width": 557,
+					"height": 520,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"scrollbarHorizontal": "visible",
+					"scrollbarVertical": "visible"
+				},
+				"LB_TABLES": {
+					"type": "listbox",
+					"left": 10,
+					"top": 10,
+					"width": 251,
+					"height": 300,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.tables",
+					"selectionMode": "single",
+					"method": "ObjectMethods/LB_TABLES.4dm",
+					"currentItemSource": "Form:C1466.current.table",
+					"columns": [
+						{
+							"header": {
+								"name": "Header4",
+								"text": "No"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 40,
+							"dataSource": "This:C1470.number",
+							"enterable": false,
+							"dataSourceTypeHint": "number",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"text": "Tables",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 194,
+							"dataSource": "This:C1470.name",
+							"enterable": false
+						}
+					]
+				},
+				"LB_FIELDS": {
+					"type": "listbox",
+					"left": 10,
+					"top": 347,
+					"width": 251,
+					"height": 240,
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.fields",
+					"selectionMode": "multiple",
+					"sizingY": "grow",
+					"method": "ObjectMethods/LB_FIELDS.4dm",
+					"currentItemSource": "Form:C1466.current.field",
+					"selectedItemsSource": "Form:C1466.current.fields",
+					"columns": [
+						{
+							"header": {
+								"text": "No",
+								"name": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 40,
+							"dataSourceTypeHint": "number",
+							"textAlign": "center",
+							"dataSource": "This:C1470.number",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Fields"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 194,
+							"dataSource": "This:C1470.name",
+							"enterable": false
+						}
+					]
+				},
+				"BTN_ADD": {
+					"type": "button",
+					"text": "▶",
+					"top": 315,
+					"left": 66,
+					"width": 135,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BTN_ADD.4dm"
+				},
+				"LB_SELECTED": {
+					"type": "listbox",
+					"left": 857,
+					"top": 50,
+					"width": 411,
+					"height": 537,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.selected",
+					"selectionMode": "multiple",
+					"currentItemSource": "",
+					"sizingX": "move",
+					"sizingY": "grow",
+					"currentItemPositionSource": "",
+					"selectedItemsSource": "Form:C1466.selectedOfSelected",
+					"singleClickEdit": true,
+					"method": "ObjectMethods/LB_SELECTED.4dm",
+					"columns": [
+						{
+							"header": {
+								"name": "Header7",
+								"text": "Label"
+							},
+							"name": "Column7",
+							"footer": {
+								"name": "Footer7"
+							},
+							"dataSource": "This:C1470.label",
+							"width": 132
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Fields"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"width": 132,
+							"dataSource": "This:C1470.name",
+							"enterable": false,
+							"dataSourceTypeHint": "text",
+							"textAlign": "left"
+						},
+						{
+							"header": {
+								"text": "Tables",
+								"name": "Header6"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"width": 130,
+							"dataSource": "This:C1470.table.name",
+							"enterable": false
+						}
+					]
+				},
+				"BTN_REMOVE": {
+					"type": "button",
+					"text": "Remove field(s)",
+					"top": 14,
+					"left": 1135,
+					"width": 135,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BTN_REMOVE.4dm",
+					"sizingX": "move"
+				},
+				"BTN_SAVE": {
+					"type": "button",
+					"text": "Save form",
+					"top": 558,
+					"left": 694,
+					"width": 152,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Meiryo",
+					"fontSize": 14,
+					"method": "ObjectMethods/BTN_SAVE.4dm",
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"BTN_CLEAR": {
+					"type": "button",
+					"text": "Clear form",
+					"top": 558,
+					"left": 271,
+					"width": 152,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Meiryo",
+					"fontSize": 14,
+					"method": "ObjectMethods/BTN_CLEAR.4dm",
+					"sizingX": "fixed",
+					"sizingY": "move"
+				}
+			}
+		}
+	],
+	"geometryStamp": 642,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

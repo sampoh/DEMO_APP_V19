@@ -1,0 +1,322 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 800,
+					"height": 600,
+					"stroke": "transparent",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Input": {
+					"type": "input",
+					"left": 88,
+					"top": 14,
+					"width": 194,
+					"height": 16,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"dataSource": "Form:C1466.formname",
+					"method": "ObjectMethods/Input.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "Form name",
+					"top": 14,
+					"left": 12,
+					"width": 74,
+					"height": 18,
+					"fontFamily": "Meiryo",
+					"fontSize": 12
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 12,
+					"top": 109,
+					"width": 774,
+					"height": 440,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.folders",
+					"selectionMode": "single",
+					"currentItemSource": "Form:C1466.selectedFolder",
+					"method": "ObjectMethods/List Box.4dm",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Folder",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.name",
+							"enterable": false,
+							"width": 210
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Children"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.groupsStyled",
+							"width": 547,
+							"enterable": false,
+							"styledText": true
+						}
+					]
+				},
+				"BTN_SAVE": {
+					"type": "button",
+					"text": "Save",
+					"top": 558,
+					"left": 650,
+					"width": 135,
+					"height": 34,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Meiryo",
+					"fontSize": 14,
+					"method": "ObjectMethods/BTN_SAVE.4dm",
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"BTN_EXPORT": {
+					"type": "button",
+					"text": "Export JSON",
+					"top": 558,
+					"left": 10,
+					"width": 135,
+					"height": 34,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Meiryo",
+					"fontSize": 14,
+					"method": "ObjectMethods/BTN_EXPORT.4dm",
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"CB_METHOD": {
+					"type": "checkbox",
+					"text": "Generate client methods",
+					"top": 561,
+					"left": 437,
+					"width": 209,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"fontFamily": "Meiryo",
+					"fontSize": 14,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.method.generate",
+					"dataSourceTypeHint": "boolean",
+					"fontWeight": "bold",
+					"stroke": "#ff0000",
+					"method": "ObjectMethods/CB_METHOD.4dm"
+				},
+				"METHOD_NAME_PREFIX": {
+					"type": "input",
+					"left": 100,
+					"top": 54,
+					"width": 179,
+					"height": 16,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"dataSource": "Form:C1466.method.name.prefix",
+					"method": "ObjectMethods/METHOD_NAME_PREFIX.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange",
+						"onAfterKeystroke",
+						"onAfterEdit"
+					],
+					"sizingX": "fixed"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Method prefix",
+					"top": 54,
+					"left": 13,
+					"width": 84,
+					"height": 18,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"sizingX": "fixed"
+				},
+				"METHOD_NAME_SAVE": {
+					"type": "input",
+					"left": 475,
+					"top": 79,
+					"width": 290,
+					"height": 16,
+					"dataSource": "Form:C1466.method.name.save",
+					"enterable": true,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"sizingX": "fixed",
+					"method": "ObjectMethods/METHOD_NAME_SAVE.4dm",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"METHOD_NAME_SHOW": {
+					"type": "input",
+					"left": 100,
+					"top": 79,
+					"width": 270,
+					"height": 16,
+					"dataSource": "Form:C1466.method.name.show",
+					"enterable": true,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"sizingX": "fixed",
+					"method": "ObjectMethods/METHOD_NAME_SHOW.4dm",
+					"events": [
+						"onLosingFocus"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Show method",
+					"top": 79,
+					"left": 14,
+					"width": 85,
+					"height": 18,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"sizingX": "fixed"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Save method",
+					"top": 79,
+					"left": 390,
+					"width": 82,
+					"height": 18,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"sizingX": "fixed"
+				},
+				"METHOD_NAME_COMMON": {
+					"type": "input",
+					"left": 440,
+					"top": 54,
+					"width": 179,
+					"height": 16,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"dataSource": "Form:C1466.method.name.common",
+					"method": "ObjectMethods/METHOD_NAME_COMMON.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange",
+						"onAfterKeystroke",
+						"onAfterEdit"
+					],
+					"sizingX": "fixed"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Method common name",
+					"top": 54,
+					"left": 297,
+					"width": 139,
+					"height": 18,
+					"fontFamily": "Meiryo",
+					"fontSize": 12,
+					"sizingX": "fixed"
+				},
+				"Line": {
+					"type": "line",
+					"top": 42,
+					"left": 8,
+					"width": 784,
+					"height": 0,
+					"stroke": "#c0c0c0",
+					"strokeWidth": 2
+				}
+			},
+			"entryOrder": [
+				"Input",
+				"METHOD_NAME_PREFIX",
+				"METHOD_NAME_COMMON",
+				"METHOD_NAME_SHOW",
+				"METHOD_NAME_SAVE",
+				"List Box",
+				"BTN_EXPORT",
+				"CB_METHOD",
+				"BTN_SAVE"
+			]
+		}
+	],
+	"geometryStamp": 728,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

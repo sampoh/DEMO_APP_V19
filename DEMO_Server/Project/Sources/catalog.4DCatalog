@@ -117,6 +117,26 @@
 			</editor_table_info>
 		</table_extra>
 	</table>
+	<table name="sample" uuid="E1F180DF9934D14C97421ECE4EF1E3FD" id="9">
+		<field name="ID" uuid="0C59296A7D453E4980BC3D527040B0B8" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="long" uuid="5D7C2D5CD7FD1644AA8EFFE8D1AC9305" type="4" never_null="true" id="2"/>
+		<field name="date" uuid="D56C19F38CFBF94BA43D554643AD4F9B" type="8" never_null="true" id="3"/>
+		<field name="time" uuid="8C26F9ED4797C14C856847D94E76EC12" type="9" never_null="true" id="4"/>
+		<field name="bool" uuid="19BAC4074DBCB542A4EB5DB27F80AD3E" type="1" never_null="true" id="5"/>
+		<field name="real" uuid="966BF2F256296B4DBDDD01AA01B5953E" type="6" never_null="true" id="6"/>
+		<field name="string" uuid="A505E3BC8815AB409B5769F721F296AC" type="10" limiting_length="255" never_null="true" id="7"/>
+		<field name="text" uuid="6C9E5E00ACE9C343B0871FD4415FD590" type="10" never_null="true" id="8"/>
+		<field name="object" uuid="A5E0CC0F35731944B6333D1D39607F43" type="21" blob_switch_size="2147483647" never_null="true" id="9"/>
+		<field name="blob" uuid="CA77BFD8B05E534A85576DCF229AA1A0" type="18" never_null="true" id="10"/>
+		<field name="picture" uuid="D06ED67FABA0BB4590044326BC7E1BD6" type="12" never_null="true" id="11"/>
+		<primary_key field_name="ID" field_uuid="0C59296A7D453E4980BC3D527040B0B8"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="13">
+				<color red="114" green="209" blue="221" alpha="255"/>
+				<coordinates left="547" top="262" width="184" height="323.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
 	<index kind="regular" uuid="0F239211EAD9A54AADFB641C457D9084" type="7">
 		<field_ref uuid="F5D8CA2D0264D24CA9C9073C1E2284D5" name="order">
 			<table_ref uuid="FB626420A6F3F540A23D327D71800D36" name="pullDown"/>
@@ -150,6 +170,11 @@
 	<index kind="regular" unique_keys="true" uuid="570BEF2FD1135943A31A3A9D20916543" type="7">
 		<field_ref uuid="AF0A7EDF456C8C4883C34034C0F74E93" name="ID">
 			<table_ref uuid="10CBD3C709D8E74BB31D1FF348DBE7CE" name="session"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="586E94155916594B8745E30C7C6A8AE7" type="7">
+		<field_ref uuid="0C59296A7D453E4980BC3D527040B0B8" name="ID">
+			<table_ref uuid="E1F180DF9934D14C97421ECE4EF1E3FD" name="sample"/>
 		</field_ref>
 	</index>
 	<index kind="regular" unique_keys="true" uuid="5C8786A0D52F4648A7949290C8670AFB" type="7">

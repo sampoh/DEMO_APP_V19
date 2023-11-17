@@ -1,4 +1,4 @@
-﻿//%attributes = {}
+//%attributes = {}
 //< 初期値オブジェクトを返却 >
 
 //第1引数 ( 必須 ) : テーブルポインタ 【 ポインタ型 】
@@ -13,9 +13,7 @@ var $ACCEPT : Boolean
 var $vpField : Pointer
 var $name : Text
 
-//$vpTable:=$1
-
-$vpTable:=->[sites:5]
+$vpTable:=$1
 
 $vlTable:=Table:C252($vpTable)
 

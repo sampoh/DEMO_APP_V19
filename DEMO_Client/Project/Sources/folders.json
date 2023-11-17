@@ -98,6 +98,18 @@
 			"Merge_4DC_Sub"
 		]
 	},
+	"UI_Generator": {
+		"methods": [
+			"UI_Base",
+			"UI_Generator",
+			"UI_MethodName",
+			"UI_ReGenerate"
+		],
+		"forms": [
+			"UI_Generator",
+			"UI_Save"
+		]
+	},
 	"雛型アプリ生成": {
 		"methods": [
 			"Edit_ProjectPrefix"

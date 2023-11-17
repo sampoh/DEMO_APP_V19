@@ -1,5 +1,4 @@
 
-var $PTR : Pointer
 var $LISTBOX : Text
 var $col; $row; $pos : Integer
 var $voSite : Object
